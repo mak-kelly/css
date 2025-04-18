@@ -1,0 +1,30 @@
+{
+  "name": "starterpack-mak-kelly",
+  "version": "1.0.0",
+  "description": "TODO: short project description, some screenshots",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dartmouth-cs52-25s/starterpack-mak-kelly.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dartmouth-cs52-25s/starterpack-mak-kelly/issues"
+  },
+  "homepage": "https://github.com/dartmouth-cs52-25s/starterpack-mak-kelly#readme",
+  "devDependencies": {
+    "@types/jquery": "^3.5.32",
+    "autoprefixer": "^10.4.21",
+    "sass": "^1.86.3",
+    "vite": "^6.3.1"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1"
+  }
+}
