@@ -1,0 +1,44 @@
+{
+  "name": "starterpack-mak-kelly",
+  "version": "1.0.0",
+  "description": "TODO: short project description, some screenshots",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dartmouth-cs52-25s/starterpack-mak-kelly.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dartmouth-cs52-25s/starterpack-mak-kelly/issues"
+  },
+  "homepage": "https://github.com/dartmouth-cs52-25s/starterpack-mak-kelly#readme",
+  "devDependencies": {
+    "@types/jquery": "^3.5.32",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "sass": "^1.86.3",
+    "vite": "^6.3.1",
+    "vite-plugin-eslint": "^1.8.1"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.4.1",
+    "axios": "^1.8.4",
+    "immer": "^10.1.1",
+    "lodash.debounce": "^4.0.8",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router": "^7.5.3",
+    "zustand": "^5.0.3"
+  }
+}
