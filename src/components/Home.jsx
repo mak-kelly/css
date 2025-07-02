@@ -3,15 +3,13 @@ import Nav from './Nav';
 
 function Home() {
   return (
-    <>
-      <section id="hero">
+    <section id="hero">
+      <div id="header-container">
+        <img alt="wood beam" id="wood-beam" src="./src/img/wooden beam.png" />
         <Nav />
-        <h1 id="hero-title">Charles Street Supply</h1>
-      </section>
-      <section id="featured-brands">
-        <h2>Featured Brands</h2>
-      </section>
-    </>
+      </div>
+      <img alt="charles street sign" id="hero-img" src="https://www.charlesstsupply.com/img/logo.png" />
+    </section>
   );
 }
 
