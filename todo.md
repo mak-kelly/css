@@ -1,0 +1,1 @@
+-the plaster washers page could be designed better where the rows are components and the data is passed in

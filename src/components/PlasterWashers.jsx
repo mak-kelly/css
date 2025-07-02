@@ -59,6 +59,10 @@ function PlasterWashers() {
     return `$${amount.toFixed(2)}`;
   };
 
+  const handleCheckout = () => {
+    console.log('Checkout with Stripe');
+  };
+
   return (
     <>
       <h1>Plaster Washers</h1>
@@ -179,6 +183,7 @@ function PlasterWashers() {
           </tbody>
         </table>
       </div>
+      <button type="button" onClick={handleCheckout}>Checkout with Stripe</button>
     </>
   );
 }
