@@ -59,9 +59,36 @@ function PlasterWashers() {
     return `$${amount.toFixed(2)}`;
   };
 
-  const handleCheckout = () => {
-    console.log('Checkout with Stripe');
+  const buildLineItems = () => {
+    const products = [
+      { key: '10-dozen', name: '10 Dozen Plaster Washers', price: 2400 },
+      { key: '21-dozen', name: '21 Dozen Plaster Washers', price: 3500 },
+      { key: '500', name: '500 Plaster Washers', price: 6500 },
+      { key: '1000', name: '1,000 Plaster Washers', price: 10500 },
+      { key: '5000', name: '5,000 Plaster Washers', price: 34500 },
+      { key: '10000', name: '10,000 Plaster Washers', price: 69000 },
+    ];
+    return products
+      .filter((p) => Number(quantities[p.key]) > 0)
+      .map((p) => ({
+        price_data: {
+          currency: 'usd',
+          product_data: { name: p.name },
+          unit_amount: p.price,
+        },
+        quantity: Number(quantities[p.key]),
+      }));
   };
+
+  async function handleCheckout(lineItems) {
+    const response = await fetch('http://localhost:4242/create-checkout-session', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ lineItems }),
+    });
+    const data = await response.json();
+    window.location = data.url;
+  }
 
   return (
     <>
@@ -183,7 +210,15 @@ function PlasterWashers() {
           </tbody>
         </table>
       </div>
-      <button type="button" onClick={handleCheckout}>Checkout with Stripe</button>
+      <div style={{ marginTop: '2rem', textAlign: 'right' }}>
+        <button
+          type="button"
+          onClick={() => handleCheckout(buildLineItems())}
+          disabled={buildLineItems().length === 0}
+        >
+          Checkout with Stripe
+        </button>
+      </div>
     </>
   );
 }
