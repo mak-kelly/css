@@ -63,7 +63,7 @@ nav {
   justify-content: space-between;
   width: 80%;
   background-color: rgb(16, 37, 60);
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+
 }
 
 #nav-links:hover {
@@ -217,4 +217,192 @@ ul {
   background-position: center;
   background-repeat: no-repeat;
   
+}
+
+#services-overview {
+  display: flex;
+  flex-direction: row;
+  width: 70vw;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.service-tab {
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15vw;
+  height: 20vh;
+  border-radius: 10px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+#more-services-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+#more-services-tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 20vh;
+  margin: 10px;
+}
+
+#services-section-header {
+  background-image: url('../src/img/delivery-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#gift-cards {
+  background-image: url('../src/img/gift-cards.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#blind-cutting {
+  background-image: url('../src/img/blind-cutting.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#catalog-sales {
+  background-image: url('../src/img/catalog-sales.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#delivery {
+  background-image: url('../src/img/delivery.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#design-service {
+  background-image: url('../src/img/design-service.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#glass-cutting {
+  background-image: url('../src/img/glass-cutting.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#in-house-handyman {
+  background-image: url('../src/img/in-house-handyman.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#key-cutting {
+  background-image: url('../src/img/key-cutting.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#knife-sharpening {
+  background-image: url('../src/img/knife-sharpening.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#lamp-repair {
+  background-image: url('../src/img/lamp-repair.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#lock-servicing {
+  background-image: url('../src/img/lock-servicing.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#paint-color-matching {
+  background-image: url('../src/img/paint-color-matching.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#referrals {
+  background-image: url('../src/img/referrals.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#rental {
+  background-image: url('../src/img/rental.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#rug-shampoo-rental {
+  background-image: url('../src/img/rug-shampoo-rental.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#screen-repair {
+  background-image: url('../src/img/screen-repair.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#se-habla-espanol {
+  background-image: url('../src/img/se-habla-espanol.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#shade-cutting {
+  background-image: url('../src/img/shade-cutting.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#shipping-service {
+  background-image: url('../src/img/shipping-service.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#window-repair {
+  background-image: url('../src/img/window-repair.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#gift-cards:hover,
+#blind-cutting:hover,
+#catalog-sales:hover,
+#delivery:hover,
+#design-service:hover,
+#glass-cutting:hover,
+#in-house-handyman:hover,
+#key-cutting:hover,
+#knife-sharpening:hover,
+#lamp-repair:hover,
+#lock-servicing:hover,
+#paint-color-matching:hover,
+#referrals:hover,
+#rental:hover,
+#rug-shampoo-rental:hover,
+#screen-repair:hover,
+#se-habla-espanol:hover,
+#shade-cutting:hover,
+#shipping-service:hover,
+#window-repair:hover {
+  transform: scale(1.05);
 }
