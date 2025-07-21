@@ -1,5 +1,6 @@
 import React from 'react';
 import Nav from './Nav';
+import Footer from './Footer';
 
 function About() {
   return (
@@ -57,6 +58,7 @@ function About() {
         </div>
         <div id="jack-behind-the-counter" />
       </section>
+      <Footer />
     </div>
   );
 }
