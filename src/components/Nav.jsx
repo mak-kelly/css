@@ -9,7 +9,7 @@ function Nav(props) {
         <li><NavLink to="/services" className="nav-link">Services</NavLink></li>
         <li><NavLink to="/shop" className="nav-link">Shop</NavLink></li>
         <li><NavLink to="/about" className="nav-link">About</NavLink></li>
-        <li><NavLink className="nav-link">+1-800-382-4360</NavLink></li>
+        <li><NavLink to="tel:1-800-382-4360" className="nav-link">+1-800-382-4360</NavLink></li>
       </ul>
       <NavLink to="/" id="logo-link"><img id="logo" alt="logo" src="../src/img/logo.png" /></NavLink>
     </nav>

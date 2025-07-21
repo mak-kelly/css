@@ -17,8 +17,12 @@ function Footer() {
           <a href="tel:1-800-382-4360">TOLL-FREE: 1-800-382-4360</a>
           <br />
           <a href="tel:617-367-9046">Local: 617-367-9046</a>
-          <p>Email: info@cssc.com</p>
-          <p>Address: 123 Main St, Boston, MA 02118</p>
+          <p>Email: <a href="mailto:info@cssc.com">info@cssc.com</a></p>
+          <p>Address:
+            <a href="https://maps.app.goo.gl/Mad6wuUkUzwd5c2U7">
+              54 Charles St, Boston, MA 02114
+            </a>
+          </p>
         </div>
         <div id="hours">
           <h2>Hours</h2>
