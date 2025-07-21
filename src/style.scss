@@ -406,3 +406,57 @@ ul {
 #window-repair:hover {
   transform: scale(1.05);
 }
+
+#footer-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 70vw;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+#footer-bottom {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+#footer-bottom img[alt*="Charles Street Supply"] {
+  height: auto;
+}
+
+#scooter {
+  position: absolute;
+  bottom: 10px;
+  left: 100vw;
+  width: 80px;
+  z-index: 2;
+}
+
+.scooter-animate {
+  animation: scooter-drive 5s ease-in-out infinite;
+}
+
+@keyframes scooter-drive {
+  0% {
+    left: 100vw;
+  }
+  20% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  60% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  80% {
+    left: -120px;
+  }
+  100% {
+    left: -120px;
+  }
+}
