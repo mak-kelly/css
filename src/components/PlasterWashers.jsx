@@ -1,225 +1,65 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import Nav from './Nav';
+import Footer from './Footer';
 
 function PlasterWashers() {
-  const [quantities, setQuantities] = useState({
-    '10-dozen': '0',
-    '21-dozen': '0',
-    500: '0',
-    1000: '0',
-    5000: '0',
-    10000: '0',
-  });
-
-  const [rowTotals, setRowTotals] = useState({
-    '10-dozen': 0,
-    '21-dozen': 0,
-    500: 0,
-    1000: 0,
-    5000: 0,
-    10000: 0,
-  });
-
-  const prices = {
-    '10-dozen': 24.00,
-    '21-dozen': 35.00,
-    500: 65.00,
-    1000: 105.00,
-    5000: 345.00,
-    10000: 690.00,
-  };
-
-  const handleQuantityChange = (key, value) => {
-    setQuantities((prev) => ({
-      ...prev,
-      [key]: value,
-    }));
-  };
-
-  const handleQuantityBlur = (key, value) => {
-    const numValue = value === '' ? 0 : parseInt(value, 10) || 0;
-    setQuantities((prev) => ({
-      ...prev,
-      [key]: numValue,
-    }));
-  };
-
-  useEffect(() => {
-    const newRowTotals = {};
-
-    Object.keys(quantities).forEach((key) => {
-      const quantity = quantities[key] === '' ? 0 : parseInt(quantities[key], 10) || 0;
-      const rowTotal = quantity * prices[key];
-      newRowTotals[key] = rowTotal;
-    });
-
-    setRowTotals(newRowTotals);
-  }, [quantities]);
-
-  const formatCurrency = (amount) => {
-    return `$${amount.toFixed(2)}`;
-  };
-
-  const buildLineItems = () => {
-    const products = [
-      { key: '10-dozen', name: '10 Dozen Plaster Washers', price: 2400 },
-      { key: '21-dozen', name: '21 Dozen Plaster Washers', price: 3500 },
-      { key: '500', name: '500 Plaster Washers', price: 6500 },
-      { key: '1000', name: '1,000 Plaster Washers', price: 10500 },
-      { key: '5000', name: '5,000 Plaster Washers', price: 34500 },
-      { key: '10000', name: '10,000 Plaster Washers', price: 69000 },
-    ];
-    return products
-      .filter((p) => Number(quantities[p.key]) > 0)
-      .map((p) => ({
-        price_data: {
-          currency: 'usd',
-          product_data: { name: p.name },
-          unit_amount: p.price,
-        },
-        quantity: Number(quantities[p.key]),
-      }));
-  };
-
-  async function handleCheckout(lineItems) {
-    const response = await fetch('http://localhost:4242/create-checkout-session', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ lineItems }),
-    });
-    const data = await response.json();
-    window.location = data.url;
-  }
-
   return (
-    <>
-      <h1>Plaster Washers</h1>
-      <div id="washer-table">
-        <table>
-          <thead>
-            <tr>
-              <th>Description</th>
-              <th>Washers</th>
-              <th>Price</th>
-              <th>Quantity</th>
-              <th>Total</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>10 Dozen Plaster Washers</td>
-              <td>120</td>
-              <td>{formatCurrency(prices['10-dozen'])}</td>
-              <td>
-                <input
-                  type="number"
-                  min="0"
-                  max="120"
-                  value={quantities['10-dozen']}
-                  onChange={(e) => handleQuantityChange('10-dozen', e.target.value)}
-                  onBlur={(e) => handleQuantityBlur('10-dozen', e.target.value)}
-                  aria-label="Quantity for 10 Dozen Plaster Washers"
-                />
-              </td>
-              <td>{formatCurrency(rowTotals['10-dozen'])}</td>
-            </tr>
-            <tr>
-              <td>21 Dozen Plaster Washers</td>
-              <td>252</td>
-              <td>{formatCurrency(prices['21-dozen'])}</td>
-              <td>
-                <input
-                  type="number"
-                  min="0"
-                  max="10000"
-                  value={quantities['21-dozen']}
-                  onChange={(e) => handleQuantityChange('21-dozen', e.target.value)}
-                  onBlur={(e) => handleQuantityBlur('21-dozen', e.target.value)}
-                  aria-label="Quantity for 21 Dozen Plaster Washers"
-                />
-              </td>
-              <td>{formatCurrency(rowTotals['21-dozen'])}</td>
-            </tr>
-            <tr>
-              <td>500 Plaster Washers</td>
-              <td>500</td>
-              <td>{formatCurrency(prices['500'])}</td>
-              <td>
-                <input
-                  type="number"
-                  min="0"
-                  max="10000"
-                  value={quantities['500']}
-                  onChange={(e) => handleQuantityChange('500', e.target.value)}
-                  onBlur={(e) => handleQuantityBlur('500', e.target.value)}
-                  aria-label="Quantity for 500 Plaster Washers"
-                />
-              </td>
-              <td>{formatCurrency(rowTotals['500'])}</td>
-            </tr>
-            <tr>
-              <td>1,000 Plaster Washers</td>
-              <td>1000</td>
-              <td>{formatCurrency(prices['1000'])}</td>
-              <td>
-                <input
-                  type="number"
-                  min="0"
-                  max="10000"
-                  value={quantities['1000']}
-                  onChange={(e) => handleQuantityChange('1000', e.target.value)}
-                  onBlur={(e) => handleQuantityBlur('1000', e.target.value)}
-                  aria-label="Quantity for 1000 Plaster Washers"
-                />
-              </td>
-              <td>{formatCurrency(rowTotals['1000'])}</td>
-            </tr>
-            <tr>
-              <td>5,000 Plaster Washers</td>
-              <td>5000</td>
-              <td>{formatCurrency(prices['5000'])}</td>
-              <td>
-                <input
-                  type="number"
-                  min="0"
-                  max="10000"
-                  value={quantities['5000']}
-                  onChange={(e) => handleQuantityChange('5000', e.target.value)}
-                  onBlur={(e) => handleQuantityBlur('5000', e.target.value)}
-                  aria-label="Quantity for 5000 Dozen Plaster Washers"
-                />
-              </td>
-              <td>{formatCurrency(rowTotals['5000'])}</td>
-            </tr>
-            <tr>
-              <td>10,000 Plaster Washers</td>
-              <td>10000</td>
-              <td>{formatCurrency(prices['10000'])}</td>
-              <td>
-                <input
-                  type="number"
-                  min="0"
-                  max="10000"
-                  value={quantities['10000']}
-                  onChange={(e) => handleQuantityChange('10000', e.target.value)}
-                  onBlur={(e) => handleQuantityBlur('10000', e.target.value)}
-                  aria-label="Quantity for 10,000 Plaster Washers"
-                />
-              </td>
-              <td>{formatCurrency(rowTotals['10000'])}</td>
-            </tr>
-          </tbody>
-        </table>
+    <div>
+      <section className="header-section" id="plaster-washers-header">
+        <Nav />
+        <div className="header-text-container">
+          <h1 className="header-text">Plaster Washers</h1>
+        </div>
+        <div className="call-to-buy-plaster-washers">
+          <button type="button" onClick={() => { window.location.href = '/plaster-washer-checkout'; }}>Buy Now</button>
+        </div>
+      </section>
+      <section id="plaster-washers-overview">
+        <div id="plaster-washers-overview-text">
+          <h2>Why Plaster Washers?</h2>
+          <p>
+            The old houses we love and live in are almost all distinguished by the pervasive use of plasterwork. Real plaster has a look, feel,
+            acoustic properties and often rich decorative detail that just can&apos;t be copied by its modern cost cutting substitute--paper-faced, gypsum-filled wallboard, or drywall.
+          </p>
+          <p>
+            Houses move and breathe, however, much like humans, and over time can develop cracks in the walls and ceilings.
+            In these areas, the layers of plaster are pulling away from the underlying strips of wood lath which support it.
+          </p>
+        </div>
+        <div id="plaster-washers-overview-image">
+          <img src="../src/img/plaster-washers.jpg" alt="Plaster Washers" />
+        </div>
+      </section>
+      <section id="plaster-washers-how-to-use">
+        <div id="plaster-washers-use-text">
+          <h2>How do they work?</h2>
+          <p>
+            Plaster work is easy to repair, even for the novice, with the a few simple tools, materials--and Charles Street Supply&apos;s exclusive plaster washers!
+          </p>
+          <p>
+            Plaster washers are about the size of a quarter and cost pennies.
+            A drywall screw goes through the washer and is driven into the wood lath behind the plaster.
+            The unique design of the plaster washers anchors the plaster firmly against the lath, stopping cracks and sagging.
+          </p>
+        </div>
+        <div id="plaster-washers-use-video">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/gJqzFDbanwI?si=gGMiqOr20vWCJ23J"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        </div>
+      </section>
+      <div className="call-to-buy-plaster-washers">
+        <button type="button" onClick={() => { window.location.href = '/plaster-washer-checkout'; }}>Buy Now</button>
       </div>
-      <div style={{ marginTop: '2rem', textAlign: 'right' }}>
-        <button
-          type="button"
-          onClick={() => handleCheckout(buildLineItems())}
-          disabled={buildLineItems().length === 0}
-        >
-          Checkout with Stripe
-        </button>
-      </div>
-    </>
+      <Footer />
+    </div>
   );
 }
 
