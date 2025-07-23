@@ -460,3 +460,56 @@ ul {
     left: -120px;
   }
 }
+
+#plaster-washers-overview {
+  display: flex;
+  flex-direction: row;
+  width: 70vw;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+#plaster-washers-overview-text {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.call-to-buy-plaster-washers {
+  align-self: center;
+  justify-self: center;
+}
+
+#plaster-washers-how-to-use {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 70vw;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+#plaster-washers-use-text {
+  padding: 10px;
+}
+
+#plaster-washers-header {
+  background-image: url('../src/img/plaster-washers-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#plaster-washer-checkout-header {
+  display: flex;
+  justify-content: center;
+}
+
+#washer-table {
+  display: flex;
+  justify-content: center;
+}
+
+#checkout-button {
+  display: flex;
+  justify-content: center;
+}
