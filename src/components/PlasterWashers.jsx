@@ -27,7 +27,7 @@ function PlasterWashers() {
           </p>
         </div>
         <div id="plaster-washers-overview-image">
-          <img src="../src/img/plaster-washers.jpg" alt="Plaster Washers" />
+          <img src="/plaster-washers.jpg" alt="Plaster Washers" />
         </div>
       </section>
       <section id="plaster-washers-how-to-use">
