@@ -11,7 +11,7 @@ function Nav(props) {
         <li><NavLink to="/about" className="nav-link">About</NavLink></li>
         <li><NavLink to="tel:1-800-382-4360" className="nav-link">+1-800-382-4360</NavLink></li>
       </ul>
-      <NavLink to="/" id="logo-link"><img id="logo" alt="logo" src="../src/img/logo.png" /></NavLink>
+      <NavLink to="/" id="logo-link"><img id="logo" alt="logo" src="/logo.png" /></NavLink>
     </nav>
   );
 }

@@ -32,11 +32,11 @@ function Footer() {
         </div>
       </section>
       <section id="footer-bottom">
-        <img src="../src/img/footer.png" alt="Drawing of Charles Street Supply Storefront" />
+        <img src="/footer.png" alt="Drawing of Charles Street Supply Storefront" />
         <img
           ref={scooterRef}
           id="scooter"
-          src="../src/img/scooter.png"
+          src="/scooter.png"
           alt="Drawing of Jack Gurnon's daughters on a vespa scooter"
         />
       </section>
