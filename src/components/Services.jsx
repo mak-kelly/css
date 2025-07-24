@@ -8,31 +8,37 @@ function Services() {
       <section className="header-section" id="services-section-header">
         <Nav />
         <div className="header-text-container">
-          <h1 className="header-text">Our Services</h1>
+          <h1 className="header-text" id="services-header-text">Our Services</h1>
         </div>
       </section>
       <section id="services-overview">
         <div id="delivery-details">
           <h2>Delivery</h2>
-          <p>We offer delivery service to Back Bay, Beacon Hill, West End,
-            North End, waterfront and Cambridge. Delivery fee may apply, please call for details. We&apos;re also known to deliver to Cape Cod in return for a weekend stay...
-          </p>
-          <p>We offer delivery from Monday through Saturday, from 9:30 AM to 5:30 PM, scheduled within two hour time slots.
-            Order online by 12:00 midnight for next-day delivery, or at the store by 5:00 PM on the previous day.
-          </p>
+          <div id="delivery-details-text">
+            <p>We offer delivery service to Back Bay, Beacon Hill, West End,
+              North End, waterfront and Cambridge. Delivery fee may apply, please call for details. We&apos;re also known to deliver to Cape Cod in return for a weekend stay...
+            </p>
+            <br />
+            <p>We offer delivery from Monday through Saturday, from 9:30 AM to 5:30 PM, scheduled within two hour time slots.
+              Order online by 12:00 midnight for next-day delivery, or at the store by 5:00 PM on the previous day.
+            </p>
+          </div>
         </div>
         <div id="services-details">
           <h2>At Your Service...</h2>
-          <p>We&apos;ll build a gas grill, repair windows and screens, install air conditioners, get cats out of dryer vents, provide locksmithing service, and more.
-            Call us at 617-367-9046 or visit the store to find out how we can help you!
-          </p>
-          <p>We also can recommend experienced professionals for all of your projects.
-            Give us a call and ask about our references!
-          </p>
+          <div id="services-details-text">
+            <p>We&apos;ll build a gas grill, repair windows and screens, install air conditioners, get cats out of dryer vents, provide locksmithing service, and more.
+              Call us at 617-367-9046 or visit the store to find out how we can help you!
+            </p>
+            <br />
+            <p>We also can recommend experienced professionals for all of your projects.
+              Give us a call and ask about our references!
+            </p>
+          </div>
         </div>
       </section>
       <section id="more-services-section">
-        <h2>More Services</h2>
+        <h2 id="more-services-header">More Services</h2>
         <div id="more-services-tabs">
           <div className="service-tab" id="gift-cards">Ace Gift Cards</div>
           <div className="service-tab" id="blind-cutting">Blind Cutting</div>
