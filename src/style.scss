@@ -38,6 +38,11 @@ nav {
   z-index: 100;
 }
 
+a:link {
+  text-decoration: none;
+  color: #000000;
+}
+
 .nav-link {
   display: flex;
   flex-direction: row;
@@ -51,6 +56,10 @@ nav {
 
 .nav-link:hover {
   background-color: rgb(16, 37, 60);
+}
+
+#phone-number {
+  color: #fff;
 }
 
 #hero-text {
@@ -575,4 +584,39 @@ ul {
 
 #more-services-header {
   padding-bottom: 10px;
+}
+
+#contact-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 10px;
+}
+
+#contact-us-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  
+}
+
+#contact-us a {
+  text-decoration: none;
+}
+
+#contact-us-header {
+  padding-bottom: 10px;
+}
+
+#hours {
+  display: start;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+#hours-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
