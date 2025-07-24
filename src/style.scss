@@ -78,7 +78,7 @@ ul {
   height: 85vh;
   margin: 0;
   padding: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('../src/img/hero.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/hero.png');
   background-size: cover;
   background-position: center;
   align-items: center;
@@ -154,7 +154,7 @@ ul {
 }
 
 #about-section-header {
-  background-image: url('../src/img/about us hero.jpg');
+  background-image: url('/about-us-hero.jpg');
   background-size: cover;
 
 }
@@ -212,7 +212,7 @@ ul {
   height: 80vh;
   padding: 15px;
   margin: 0 auto;
-  background-image: url('../src/img/jack.jpg');
+  background-image: url('/jack.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -257,7 +257,7 @@ ul {
 }
 
 #services-section-header {
-  background-image: url('../src/img/delivery-hero.jpg');
+  background-image: url('/delivery-hero.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -268,6 +268,7 @@ ul {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  
 }
 #blind-cutting {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/blind-cutting.jpg');
@@ -405,4 +406,111 @@ ul {
 #shipping-service:hover,
 #window-repair:hover {
   transform: scale(1.05);
+}
+
+#footer-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 70vw;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+#footer-bottom {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+#footer-bottom img[alt*="Charles Street Supply"] {
+  height: auto;
+}
+
+#scooter {
+  position: absolute;
+  bottom: 10px;
+  left: 100vw;
+  width: 80px;
+  z-index: 2;
+}
+
+.scooter-animate {
+  animation: scooter-drive 5s ease-in-out infinite;
+}
+
+@keyframes scooter-drive {
+  0% {
+    left: 100vw;
+  }
+  20% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  60% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  80% {
+    left: -120px;
+  }
+  100% {
+    left: -120px;
+  }
+}
+
+#plaster-washers-overview {
+  display: flex;
+  flex-direction: row;
+  width: 70vw;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+#plaster-washers-overview-text {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.call-to-buy-plaster-washers {
+  align-self: center;
+  justify-self: center;
+}
+
+#plaster-washers-how-to-use {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 70vw;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+#plaster-washers-use-text {
+  padding: 10px;
+}
+
+#plaster-washers-header {
+  background-image: url('/plaster-washers-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#plaster-washer-checkout-header {
+  display: flex;
+  justify-content: center;
+}
+
+#washer-table {
+  display: flex;
+  justify-content: center;
+}
+
+#checkout-button {
+  display: flex;
+  justify-content: center;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import Nav from './Nav';
+import Footer from './Footer';
 
 function Services() {
   return (
@@ -61,6 +62,7 @@ function Services() {
           <div className="service-tab" id="window-repair">Window Repair</div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

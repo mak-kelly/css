@@ -1,5 +1,6 @@
 import React from 'react';
 import Nav from './Nav';
+import Footer from './Footer';
 
 function About() {
   return (
@@ -26,7 +27,7 @@ function About() {
             </p>
           </div>
           <div className="our-story-image-container">
-            <img src="../src/img/our-story-image-1.png" alt="Original Charles Street Hardware Store" />
+            <img src="/our-story-image-1.png" alt="Original Charles Street Hardware Store" />
           </div>
         </div>
         <div id="our-story-containter-2">
@@ -49,14 +50,15 @@ function About() {
             </p>
           </div>
           <div className="our-story-image-container">
-            <img src="../src/img/our-story-image-2.png" alt="Charles Street in the 1960s" />
+            <img src="/our-story-image-2.png" alt="Charles Street in the 1960s" />
           </div>
         </div>
         <div id="jack-signature">
-          <img src="../src/img/jack-gurnon-signature.png" alt="Jack Gurnon Signature" />
+          <img src="/jack-gurnon-signature.png" alt="Jack Gurnon Signature" />
         </div>
         <div id="jack-behind-the-counter" />
       </section>
+      <Footer />
     </div>
   );
 }
