@@ -2,7 +2,7 @@
 .montserrat {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 600;
 }
 /* CSS Reset - Remove all default margins and padding */
 * {
@@ -23,6 +23,10 @@ body, html {
 
 .active {
   color: pink;
+}
+
+h2 {
+  color:rgb(16, 37, 60)
 }
 
 nav {
@@ -231,6 +235,16 @@ ul {
   width: 70vw;
   padding: 15px;
   margin: 0 auto;
+  height: 40vh;
+}
+
+#services-overview h2 {
+  color: rgb(16, 37, 60);
+  font-size: 1.5rem;
+}
+
+#services-overview p {
+  color: rgb(16, 37, 60);
 }
 
 .service-tab {
@@ -251,6 +265,7 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 80vw;
   padding: 15px;
   margin: 0 auto;
@@ -270,6 +285,11 @@ ul {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+#services-header-text {
+  color: #fff;
+  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 #gift-cards {
@@ -525,3 +545,34 @@ ul {
   justify-content: center;
 }
 
+#delivery-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 10px;
+}
+
+#delivery-details-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+
+#services-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 10px;
+}
+
+#services-details-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+#more-services-header {
+  padding-bottom: 10px;
+}
