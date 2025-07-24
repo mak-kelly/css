@@ -31,6 +31,7 @@ nav {
   align-items: center;
   justify-content: center;
   padding: 10px;
+  z-index: 100;
 }
 
 .nav-link {
@@ -146,11 +147,16 @@ ul {
 }
 
 .header-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   height: 80vh;
+  width: 100%;
 }
 
 #about-section-header {
@@ -236,6 +242,9 @@ ul {
   height: 20vh;
   border-radius: 10px;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  
 }
 
 #more-services-section {
@@ -271,7 +280,7 @@ ul {
   
 }
 #blind-cutting {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/blind-cutting.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/shades.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -295,7 +304,7 @@ ul {
   background-repeat: no-repeat;
 }
 #glass-cutting {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/glass-cutting.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/glass.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -307,13 +316,13 @@ ul {
   background-repeat: no-repeat;
 }
 #key-cutting {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/key-cutting.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/keys.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 #knife-sharpening {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/knife-sharpening.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/knives.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -331,7 +340,7 @@ ul {
   background-repeat: no-repeat;
 }
 #paint-color-matching {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/paint-color-matching.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/color-samples.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -343,7 +352,7 @@ ul {
   background-repeat: no-repeat;
 }
 #rental {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/rental.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/drills.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -367,13 +376,13 @@ ul {
   background-repeat: no-repeat;
 }
 #shade-cutting {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/shade-cutting.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/shades-2.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 #shipping-service {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/shipping-service.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/moving-boxes.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -405,7 +414,8 @@ ul {
 #shade-cutting:hover,
 #shipping-service:hover,
 #window-repair:hover {
-  transform: scale(1.05);
+  transform: scale(1.05) ;
+  transition: transform 0.5s ease;
 }
 
 #footer-section {
@@ -514,3 +524,4 @@ ul {
   display: flex;
   justify-content: center;
 }
+
