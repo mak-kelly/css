@@ -9,3 +9,5 @@
 -success page for stripe. maybe rerout to plaster washer page or show a reciept
 -add something to shop-in-store section
 -center the page header text!!
+-add effect on ace buy button
+-

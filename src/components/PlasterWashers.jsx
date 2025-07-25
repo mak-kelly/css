@@ -8,19 +8,21 @@ function PlasterWashers() {
       <section className="header-section" id="plaster-washers-header">
         <Nav />
         <div className="header-text-container">
-          <h1 className="header-text">Plaster Washers</h1>
+          <h1 className="header-text" id="plaster-washers-header-text">Plaster Washers</h1>
         </div>
         <div className="call-to-buy-plaster-washers">
-          <button type="button" onClick={() => { window.location.href = '/plaster-washer-checkout'; }}>Buy Now</button>
+          <button id="buy-plaster-washers-button" type="button" onClick={() => { window.location.href = '/plaster-washer-checkout'; }}>Buy Now</button>
         </div>
       </section>
       <section id="plaster-washers-overview">
         <div id="plaster-washers-overview-text">
           <h2>Why Plaster Washers?</h2>
+          <br />
           <p>
             The old houses we love and live in are almost all distinguished by the pervasive use of plasterwork. Real plaster has a look, feel,
             acoustic properties and often rich decorative detail that just can&apos;t be copied by its modern cost cutting substitute--paper-faced, gypsum-filled wallboard, or drywall.
           </p>
+          <br />
           <p>
             Houses move and breathe, however, much like humans, and over time can develop cracks in the walls and ceilings.
             In these areas, the layers of plaster are pulling away from the underlying strips of wood lath which support it.
@@ -33,9 +35,11 @@ function PlasterWashers() {
       <section id="plaster-washers-how-to-use">
         <div id="plaster-washers-use-text">
           <h2>How do they work?</h2>
+          <br />
           <p>
             Plaster work is easy to repair, even for the novice, with the a few simple tools, materials--and Charles Street Supply&apos;s exclusive plaster washers!
           </p>
+          <br />
           <p>
             Plaster washers are about the size of a quarter and cost pennies.
             A drywall screw goes through the washer and is driven into the wood lath behind the plaster.
@@ -56,7 +60,7 @@ function PlasterWashers() {
         </div>
       </section>
       <div className="call-to-buy-plaster-washers">
-        <button type="button" onClick={() => { window.location.href = '/plaster-washer-checkout'; }}>Buy Now</button>
+        <button id="buy-plaster-washers-button" type="button" onClick={() => { window.location.href = '/plaster-washer-checkout'; }}>Buy Now</button>
       </div>
       <Footer />
     </div>
