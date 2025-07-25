@@ -144,9 +144,10 @@ ul {
 }
 
 .header-section {
-  height: 80vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .header-text {
