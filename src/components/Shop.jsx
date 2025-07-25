@@ -8,7 +8,7 @@ function Shop() {
       <section className="header-section" id="shop-header">
         <Nav />
         <div className="header-text-container">
-          <h1 className="header-text">Shop</h1>
+          <h1 className="header-text" id="shop-header-text">Shop</h1>
         </div>
       </section>
       <div id="shop-section">
