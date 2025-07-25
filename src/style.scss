@@ -166,11 +166,12 @@ ul {
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 80vh;
   width: 100%;
+
 }
 
 #about-section-header {
@@ -521,6 +522,7 @@ ul {
 
 #plaster-washers-header-text {
   color:white;
+  position: relative;
 }
 
 #plaster-washers-overview-text {
