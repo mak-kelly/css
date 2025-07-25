@@ -181,24 +181,27 @@ ul {
 #our-story-containter-1 {
   display: flex;
   flex-direction: row;
+  align-items: center;
   width: 70vw;
   padding: 15px;
   margin: 0 auto;
-
+  max-width: 1300px;
 }
 
 #our-story-containter-2 {
   display: flex;
   flex-direction: row-reverse;
+  align-items: center;
   width: 70vw;
   padding: 15px;
   margin: 0 auto;
+  max-width: 1300px;
 }
 
 .our-story-text-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
   padding-top: 50px;
   padding-bottom: 50px;
   padding-left: 10px;
@@ -208,9 +211,9 @@ ul {
 .our-story-text-container-2 {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  justify-content: space-evenly;
+  padding-top: 50px;
+  padding-bottom: 50px;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -619,4 +622,9 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+#about-header-text {
+  color:rgb(16, 37, 60);
+
 }
