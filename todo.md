@@ -5,9 +5,12 @@
 -reformat text on services page
 
 -----------------------------------------------------------------------------------------------------------------
+-homepage
+-make sure all options are on plaster washer table
+-design plaster washer table
 -make sure people know inventory is one day behind online!! call to make sure or just come in :) 
 -success page for stripe. maybe rerout to plaster washer page or show a reciept
 -add something to shop-in-store section
 -center the page header text!!
 -add effect on ace buy button
--
+-add effect on plaster washer buy button

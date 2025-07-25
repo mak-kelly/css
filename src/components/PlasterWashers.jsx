@@ -9,9 +9,10 @@ function PlasterWashers() {
         <Nav />
         <div className="header-text-container">
           <h1 className="header-text" id="plaster-washers-header-text">Plaster Washers</h1>
-        </div>
-        <div className="call-to-buy-plaster-washers">
-          <button id="buy-plaster-washers-button" type="button" onClick={() => { window.location.href = '/plaster-washer-checkout'; }}>Buy Now</button>
+          <br />
+          <div className="call-to-buy-plaster-washers">
+            <button id="buy-plaster-washers-button" type="button" onClick={() => { window.location.href = '/plaster-washer-checkout'; }}>Buy Now</button>
+          </div>
         </div>
       </section>
       <section id="plaster-washers-overview">
