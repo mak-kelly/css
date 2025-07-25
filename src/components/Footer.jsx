@@ -35,7 +35,7 @@ function Footer() {
         </div>
       </section>
       <section id="footer-bottom">
-        <img src="/footer.png" alt="Drawing of Charles Street Supply Storefront" />
+        <img id="footer-image" src="/footer.png" alt="Drawing of Charles Street Supply Storefront" />
         <img
           ref={scooterRef}
           id="scooter"
