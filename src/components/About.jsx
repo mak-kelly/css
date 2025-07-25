@@ -8,7 +8,7 @@ function About() {
       <section className="header-section" id="about-section-header">
         <Nav />
         <div className="header-text-container">
-          <h1 className="header-text">About Us</h1>
+          <h1 className="header-text" id="about-header-text">About Us</h1>
         </div>
       </section>
       <section id="our-story-section">
@@ -18,9 +18,11 @@ function About() {
               After awhile Dick started to work part time and on weekends in the store and soon became partners in 1952.
               During the early 50&apos;s CSSC moved out of their tiny basement and moved to an expansive space of 1500 square feet at 43 Charles Street.
             </p>
+            <br />
             <p>
               All was well until 1963 when someone lit the trash on fire in the alley behind the store and the entire store was burned out and my dad&apos;s lease was cancelled.
             </p>
+            <br />
             <p>
               Spent the summer looking for a new location for the store.
               I had the responsibility of holding a fire sale (all the stuff that didn&apos;t burn & stuff the fire fighters didn&apos;t take) every weekend on our front lawn in Danvers.
@@ -36,14 +38,17 @@ function About() {
               On Labor Day 1963 we opened a new store at our present location at 54 Charles Street, with very limited inventory.
               We now have over 24,000 products.
             </p>
+            <br />
             <p>
               One long weekend in 1985 we knocked the wall down between us and the little fish market next door at 56 Charles street and increased our size to 2100 square feet on one floor!
               We were only closed for 2 days and reopened with a very dusty but larger store with two street numbers. (54 & 56) Sounds big doesn&apos;t it? People online don&apos;t know!
             </p>
+            <br />
             <p>
               I worked at the store when I was old enough to dust, and as soon as I could see over the counter and &quot;make change&quot; I would take the commuter rail into Boston from Danvers
               by myself (think of that in these times) after school and drive in with my dad on Saturdays.
             </p>
+            <br />
             <p>
               After graduation from UMass in 1977, I started working full time and shortly thereafter Norman came on board.
               We have had a cast of characters but no matter how many have worked at CSSC, they all feel part of the family.
