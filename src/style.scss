@@ -99,6 +99,151 @@ ul {
   text-align: center;
 }
 
+#home-section-header {
+  background-image: url('/hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#come-visit-us-text {
+  text-align: center;
+  padding: 10px;
+}
+
+#come-visit-us-map {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+#home-header-text {
+  position: relative;
+  color: white;
+}
+
+#home-header-text-2 {
+  color: white;
+  position: relative;
+}
+
+#featured-brands {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  margin: 0 auto;
+  padding: 15px;
+  height: 20vh;
+
+}
+
+#featured-brands-header {
+  text-align: center;
+  padding: 10px;
+}
+
+#featured-brands-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+#featured-brands-list li {
+  width: 10vw;
+  height: stretch;
+}
+
+#yeti {
+  background-image: url('/yeti.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#weber {
+  background-image: url('/weber.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#ben-moore {
+  background-image: url('/benjamin-moore.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#miele {
+  background-image: url('/miele.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#leatherman {
+  background-image: url('/leatherman.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#homepage-plaster-washer-container {
+  height: 30vh;
+  z-index: -1;
+  background-color: rgb(16, 37, 60);
+}
+
+#homepage-plaster-washers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 70vw;
+  margin: 0 auto;
+  padding: 15px;
+  height: 30vh;
+}
+
+#homepage-plaster-washers-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#homepage-plaster-washers-text h2 {
+  color: white;
+}
+
+#homepage-plaster-washers-text p {
+  color: white;
+}
+
+#homepage-plaster-washers-image-img {
+  height: 25vh;
+}
+
+#homepage-plaster-washers-text-buttons {
+  padding-top: 5px;
+}
+
+#homepage-plaster-washers-text-buttons-learn-more {
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  width: fit-content;
+  margin-right: 10px;
+}
+
+#homepage-plaster-washers-text-buttons-buy-now {
+  background-color:white;
+  padding: 10px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  width: fit-content;
+  margin-left: 10px;
+}
+
 #logo-link {
   display: flex;
   justify-content: center;

@@ -13,10 +13,6 @@ import About from './components/About';
 import PlasterWasherCheckout from './components/PlasterWasherCheckout';
 import Shop from './components/Shop';
 
-function FallBack(props) {
-  return <div>URL Not Found</div>;
-}
-
 function App(props) {
   return (
     <BrowserRouter>
@@ -29,7 +25,7 @@ function App(props) {
           <Route path="/plaster-washer-checkout" element={<PlasterWasherCheckout />} />
           <Route path="/cancel" element={<Navigate to="/plaster-washer-checkout" />} />
           <Route path="/shop" element={<Shop />} />
-          <Route path="*" element={<FallBack />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </div>
     </BrowserRouter>
