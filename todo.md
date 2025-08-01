@@ -4,10 +4,11 @@
 -add images to services tabs
 -reformat text on services page
 -center the page header text!!
+-homepage
+
 
 
 -----------------------------------------------------------------------------------------------------------------
--homepage
 -make sure all options are on plaster washer table
 -design plaster washer table
 -make sure people know inventory is one day behind online!! call to make sure or just come in :) 
@@ -16,3 +17,4 @@
 -add effect on ace buy button
 -add effect on plaster washer buy button
 -add padding under hours header in footer
+-tax and shipping costs in table
