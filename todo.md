@@ -3,6 +3,8 @@
 -clean up footer information
 -add images to services tabs
 -reformat text on services page
+-center the page header text!!
+
 
 -----------------------------------------------------------------------------------------------------------------
 -homepage
@@ -11,6 +13,6 @@
 -make sure people know inventory is one day behind online!! call to make sure or just come in :) 
 -success page for stripe. maybe rerout to plaster washer page or show a reciept
 -add something to shop-in-store section
--center the page header text!!
 -add effect on ace buy button
 -add effect on plaster washer buy button
+-add padding under hours header in footer
