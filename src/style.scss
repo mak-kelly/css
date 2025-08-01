@@ -50,8 +50,16 @@ a:link {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  color: #fff;
+  color: #fff !important;
   text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.nav-link:visited {
+  color: #fff !important;
+}
+
+.nav-link:link {
+  color: #fff !important;
 }
 
 .nav-link:hover {
