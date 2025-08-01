@@ -12,8 +12,7 @@ function PlasterWashers() {
           <h1 className="header-text" id="plaster-washers-header-text">Plaster Washers</h1>
           <br />
           <div className="call-to-buy-plaster-washers">
-            <button id="buy-plaster-washers-button" type="button">Buy Now</button>
-            <NavLink to="/plaster-washer-checkout">Checkout</NavLink>
+            <NavLink id="buy-plaster-washers-button" to="/plaster-washer-checkout">Buy Now</NavLink>
           </div>
         </div>
       </section>
@@ -63,7 +62,7 @@ function PlasterWashers() {
         </div>
       </section>
       <div className="call-to-buy-plaster-washers">
-        <button id="buy-plaster-washers-button" type="button" onClick={() => { window.location.href = '/plaster-washer-checkout'; }}>Buy Now</button>
+        <NavLink id="buy-plaster-washers-button" to="/plaster-washer-checkout">Buy Now</NavLink>
       </div>
       <Footer />
     </div>
