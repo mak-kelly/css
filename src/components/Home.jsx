@@ -11,7 +11,8 @@ function Home() {
         <div className="header-text-container">
           <h1 className="header-text" id="home-header-text">Charles Street Supply</h1>
           <br />
-          <h1 id="home-header-text-2">Boston&apos;s Oldest Hardware Store</h1>
+          <h1 id="home-header-text-2">Boston&apos;s Oldest &amp; Most</h1>
+          <h1 id="home-header-text-2">Trusted Hardware Store</h1>
         </div>
       </section>
       <section id="featured-brands">
