@@ -5,6 +5,7 @@ function Nav(props) {
   return (
     <nav id="nav-container">
       <ul id="nav-links">
+        <li><NavLink to="/" className="nav-link" id="nav-link-home" /></li>
         <li><NavLink to="/plaster-washers" className="nav-link" id="nav-link-plaster-washers">Plaster Washers</NavLink></li>
         <li><NavLink to="/services" className="nav-link" id="nav-link-services">Services</NavLink></li>
         <li><NavLink to="/shop" className="nav-link" id="nav-link-shop">Shop</NavLink></li>
