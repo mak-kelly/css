@@ -11,8 +11,8 @@
 -make sure all options are on plaster washer table
 -design plaster washer table
 -when you navigate between pages, move to the top of the page
-
+-success page for stripe. maybe rerout to plaster washer page or show a reciept
 
 -----------------------------------------------------------------------------------------------------------------
--success page for stripe. maybe rerout to plaster washer page or show a reciept
 -add tax and shipping for stripe
+-rerout to actual page rather than localhost

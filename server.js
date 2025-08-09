@@ -6,7 +6,7 @@ const Stripe = require('stripe');
 const cors = require('cors');
 
 const app = express();
-const { STRIPE_SECRET_KEY } = process.env;
+const { STRIPE_SECRET_KEY, CLIENT_URL } = process.env;
 const stripe = Stripe(STRIPE_SECRET_KEY); // TODO: Replace with your Stripe secret key
 
 app.use(cors());
@@ -19,8 +19,8 @@ app.post('/create-checkout-session', async (req, res) => {
       payment_method_types: ['card'],
       line_items: lineItems,
       mode: 'payment',
-      success_url: 'http://localhost:5173/success',
-      cancel_url: 'http://localhost:5173/cancel',
+      success_url: `http://${CLIENT_URL}/success`,
+      cancel_url: `http://${CLIENT_URL}/cancel`,
     });
     res.json({ url: session.url });
   } catch (e) {
