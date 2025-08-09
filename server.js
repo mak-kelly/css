@@ -6,7 +6,7 @@ const Stripe = require('stripe');
 const cors = require('cors');
 
 const app = express();
-const { STRIPE_SECRET_KEY } = process.env;
+const { STRIPE_SECRET_KEY, CLIENT_URL } = process.env;
 const stripe = Stripe(STRIPE_SECRET_KEY); // TODO: Replace with your Stripe secret key
 
 app.use(cors());
