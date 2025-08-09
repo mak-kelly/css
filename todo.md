@@ -10,8 +10,9 @@
 -add something to shop-in-store section
 -make sure all options are on plaster washer table
 -design plaster washer table
+-when you navigate between pages, move to the top of the page
 
 
 -----------------------------------------------------------------------------------------------------------------
 -success page for stripe. maybe rerout to plaster washer page or show a reciept
--when you navigate between pages, move to the top of the page
+-add tax and shipping for stripe
