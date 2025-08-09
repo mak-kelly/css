@@ -620,28 +620,11 @@ ul {
   background-repeat: no-repeat;
 }
 
-#gift-cards:hover,
-#blind-cutting:hover,
-#catalog-sales:hover,
-#delivery:hover,
-#design-service:hover,
-#glass-cutting:hover,
-#in-house-handyman:hover,
-#key-cutting:hover,
-#knife-sharpening:hover,
-#lamp-repair:hover,
-#lock-servicing:hover,
-#paint-color-matching:hover,
-#referrals:hover,
-#rental:hover,
-#rug-shampoo-rental:hover,
-#screen-repair:hover,
-#se-habla-espanol:hover,
-#shade-cutting:hover,
-#shipping-service:hover,
-#window-repair:hover {
-  transform: scale(1.05) ;
-  transition: transform 0.5s ease;
+#se-habla-espanol {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/lincoln.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #footer-containter {
