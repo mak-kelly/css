@@ -644,6 +644,18 @@ ul {
   transition: transform 0.5s ease;
 }
 
+#footer-containter {
+  background-color: rgb(16, 37, 60);
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#footer-section a, #footer-section p, #footer-section h2 {
+  color: white;
+  text-decoration: none;
+}
+
 #footer-section {
   display: flex;
   flex-direction: row;
@@ -838,6 +850,10 @@ ul {
   flex-direction: column;
   justify-content: space-evenly;
   padding: 10px;
+}
+
+#hours-header {
+  padding-bottom: 15px;
 }
 
 #hours-text {
