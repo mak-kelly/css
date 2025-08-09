@@ -135,9 +135,14 @@ ul {
   background-repeat: no-repeat;
 }
 
+#come-visit-us {
+  padding-top: 20px;
+}
+
 #come-visit-us-text {
   text-align: center;
   padding: 10px;
+  padding-bottom: 20px;
 }
 
 #come-visit-us-map {
@@ -154,14 +159,17 @@ ul {
 #home-header-text-2 {
   color: white;
   position: relative;
+  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 #featured-brands {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 70vw;
   margin: 0 auto;
-  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   height: 20vh;
 
 }
@@ -169,6 +177,7 @@ ul {
 #featured-brands-header {
   text-align: center;
   padding: 10px;
+  padding-bottom: 15px;
 }
 
 #featured-brands-list {
