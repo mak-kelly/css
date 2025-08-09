@@ -762,6 +762,147 @@ ul {
   background-repeat: no-repeat;
 }
 
+#plaster-washer-checkout-header {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+#plaster-washer-checkout-header h1 {
+  color: rgb(16, 37, 60);
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+#washer-table {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+#washer-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  table-layout: fixed;
+}
+
+#washer-table th:nth-child(1),
+#washer-table td:nth-child(1) {
+  width: 40%;
+}
+
+#washer-table th:nth-child(2),
+#washer-table td:nth-child(2) {
+  width: 15%;
+}
+
+#washer-table th:nth-child(3),
+#washer-table td:nth-child(3) {
+  width: 15%;
+}
+
+#washer-table th:nth-child(4),
+#washer-table td:nth-child(4) {
+  width: 15%;
+}
+
+#washer-table th:nth-child(5),
+#washer-table td:nth-child(5) {
+  width: 15%;
+}
+
+#washer-table th {
+  background-color: rgb(16, 37, 60);
+  color: white;
+  padding: 15px 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#washer-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e9ecef;
+  vertical-align: middle;
+}
+
+#washer-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+#washer-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+#washer-table input[type="number"] {
+  width: 80px;
+  padding: 8px 10px;
+  border: 2px solid #dee2e6;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+#washer-table input[type="number"]:focus {
+  outline: none;
+  border-color: rgb(16, 37, 60);
+  box-shadow: 0 0 0 3px rgba(16, 37, 60, 0.1);
+}
+
+#washer-table .product-description {
+  color: #666;
+  font-style: italic;
+  font-size: 0.75rem;
+  margin-top: 4px;
+}
+
+#subtotal-row {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  border-top: 2px solid rgb(16, 37, 60);
+}
+
+#subtotal-row td {
+  padding: 15px 12px;
+  font-size: 1.1rem;
+}
+
+#checkout-button {
+  text-align: center;
+  margin: 30px 0;
+}
+
+#checkout-button button {
+  background-color: #635bff;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  min-width: 200px;
+}
+
+#checkout-button button:hover {
+  background-color: #5a52e6;
+}
+
+#checkout-button button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
 #delivery-details {
   display: flex;
   flex-direction: column;
