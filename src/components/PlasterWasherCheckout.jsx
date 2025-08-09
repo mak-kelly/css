@@ -116,7 +116,7 @@ function PlasterWashers() {
     <>
       <Nav />
       <div id="plaster-washer-checkout-header">
-        <h1>Plaster Washers</h1>
+        <h1>Plaster Washer Checkout</h1>
       </div>
       <div id="washer-table">
         <table>
@@ -250,7 +250,13 @@ function PlasterWashers() {
               <td>{formatCurrency(rowTotals['10000'])}</td>
             </tr>
             <tr>
-              <td>90 Piece Plaster Washer Repair Kit</td>
+              <td>
+                90 Piece Plaster Washer Repair Kit
+                <br />
+                <small className="product-description">
+                  Plaster washers, rust proof coated screws and a screw driving bit.
+                </small>
+              </td>
               <td>90</td>
               <td>{formatCurrency(prices['90-piece-kit'])}</td>
               <td>
@@ -267,7 +273,13 @@ function PlasterWashers() {
               <td>{formatCurrency(rowTotals['90-piece-kit'])}</td>
             </tr>
             <tr>
-              <td>175 Piece Plaster Washer Repair Kit</td>
+              <td>
+                175 Piece Plaster Washer Repair Kit
+                <br />
+                <small className="product-description">
+                  Plaster washers, rust proof coated screws and a screw driving bit.
+                </small>
+              </td>
               <td>175</td>
               <td>{formatCurrency(prices['175-piece-kit'])}</td>
               <td>
@@ -284,7 +296,13 @@ function PlasterWashers() {
               <td>{formatCurrency(rowTotals['175-piece-kit'])}</td>
             </tr>
             <tr>
-              <td>250 Piece Plaster Washer Repair Kit</td>
+              <td>
+                250 Piece Plaster Washer Repair Kit
+                <br />
+                <small className="product-description">
+                  Plaster washers, rust proof coated screws and a screw driving bit.
+                </small>
+              </td>
               <td>250</td>
               <td>{formatCurrency(prices['250-piece-kit'])}</td>
               <td>
