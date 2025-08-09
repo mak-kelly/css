@@ -29,7 +29,7 @@ h2 {
   color:rgb(16, 37, 60)
 }
 
-nav {
+#nav-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,6 +37,8 @@ nav {
   padding: 10px;
   z-index: 100;
 }
+
+
 
 a:link {
   text-decoration: none;
@@ -52,6 +54,31 @@ a:link {
   padding: 15px;
   color: #fff !important;
   text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+#nav-link-plaster-washers:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+#nav-link-services:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+#nav-link-shop:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+#nav-link-about:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+#nav-link-phone-number:hover {
+  color: white;
+  text-decoration: underline;
 }
 
 .nav-link:visited, .nav-link:link {
@@ -81,11 +108,9 @@ a:link {
   justify-content: space-between;
   width: 80%;
   background-color: rgb(16, 37, 60);
+  max-width: 1500px;
+  margin: 0 auto;
 
-}
-
-#nav-links:hover {
-  background-color: rgb(13, 30, 49);
 }
 
 ul {
