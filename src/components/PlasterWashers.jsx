@@ -13,7 +13,7 @@ function PlasterWashers() {
           <h1 className="header-text" id="plaster-washers-header-text">Plaster Washers</h1>
           <br />
           <div className="call-to-buy-plaster-washers">
-            <NavLink id="buy-plaster-washers-button" to="/plaster-washer-checkout">Buy Now</NavLink>
+            <NavLink id="buy-plaster-washers-button" to="/plaster-washer-checkout">Buy Now!</NavLink>
           </div>
         </div>
       </section>
@@ -63,7 +63,7 @@ function PlasterWashers() {
         </div>
       </section>
       <div className="call-to-buy-plaster-washers">
-        <NavLink id="buy-plaster-washers-button" to="/plaster-washer-checkout">Buy Now</NavLink>
+        <NavLink id="buy-plaster-washers-button" to="/plaster-washer-checkout">Buy Now!</NavLink>
       </div>
       <Footer />
     </div>
