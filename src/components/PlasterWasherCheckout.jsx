@@ -114,8 +114,8 @@ function PlasterWashers() {
 
   return (
     <>
-      <Nav />
       <div id="plaster-washer-checkout-header">
+        <Nav />
         <h1>Plaster Washer Checkout</h1>
       </div>
       <div id="washer-table">

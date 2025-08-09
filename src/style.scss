@@ -763,13 +763,17 @@ ul {
 }
 
 #plaster-washer-checkout-header {
+  background-image: url('/plaster-washer-checkout.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   text-align: center;
   padding: 20px;
   margin-bottom: 30px;
 }
 
 #plaster-washer-checkout-header h1 {
-  color: rgb(16, 37, 60);
+  color: white;
   font-size: 2.5rem;
   font-weight: 600;
   margin: 0;
