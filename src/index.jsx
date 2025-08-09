@@ -12,10 +12,12 @@ import PlasterWashers from './components/PlasterWashers';
 import About from './components/About';
 import PlasterWasherCheckout from './components/PlasterWasherCheckout';
 import Shop from './components/Shop';
+import ScrollToTop from './components/ScrollToTop';
 
 function App(props) {
   return (
     <BrowserRouter>
+      <ScrollToTop />  {/* Always listens for route changes */}
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
