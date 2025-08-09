@@ -5,6 +5,7 @@ import Footer from './Footer';
 
 function PlasterWashers() {
   return (
+
     <div>
       <section className="header-section" id="plaster-washers-header">
         <Nav />
