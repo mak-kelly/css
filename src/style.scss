@@ -38,8 +38,6 @@ h2 {
   z-index: 100;
 }
 
-
-
 a:link {
   text-decoration: none;
   color: #000000;
@@ -54,6 +52,16 @@ a:link {
   padding: 15px;
   color: #fff !important;
   text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+#nav-link-home {
+  background-image: url('/logo-short.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 100%;
+
 }
 
 #nav-link-plaster-washers:hover {
