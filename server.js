@@ -9,7 +9,15 @@ const app = express();
 const { STRIPE_SECRET_KEY, CLIENT_URL } = process.env;
 const stripe = Stripe(STRIPE_SECRET_KEY); // TODO: Replace with your Stripe secret key
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:5173', // Vite dev server
+    'http://localhost:3000', // Alternative dev port
+    'https://your-frontend-domain.com', // Replace with your actual frontend domain
+  ],
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type'],
+}));
 app.use(express.json());
 
 app.post('/create-checkout-session', async (req, res) => {

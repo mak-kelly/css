@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Nav from './Nav';
 import Footer from './Footer';
 
-const { CLIENT_URL } = process.env;
-
 function PlasterWashers() {
   const [quantities, setQuantities] = useState({
     'test-item': '0',
@@ -105,7 +103,7 @@ function PlasterWashers() {
   };
 
   async function handleCheckout(lineItems) {
-    const response = await fetch(`${CLIENT_URL}/create-checkout-session`, {
+    const response = await fetch('https://css-nsgt.onrender.com/create-checkout-session', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ lineItems }),
