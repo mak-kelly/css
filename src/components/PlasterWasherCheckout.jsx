@@ -103,7 +103,7 @@ function PlasterWashers() {
   };
 
   async function handleCheckout(lineItems) {
-    const response = await fetch('https://css-nsgt.onrender.com/create-checkout-session', {
+    const response = await fetch('https://cssapi.onrender.com/create-checkout-session', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ lineItems }),
