@@ -5,6 +5,7 @@ import Footer from './Footer';
 function PlasterWashers() {
   const [quantities, setQuantities] = useState({
     'test-item': '0',
+    'test-dollar': '0',
     '10-dozen': '0',
     '21-dozen': '0',
     500: '0',
@@ -18,6 +19,7 @@ function PlasterWashers() {
 
   const [rowTotals, setRowTotals] = useState({
     'test-item': 0,
+    'test-dollar': 0,
     '10-dozen': 0,
     '21-dozen': 0,
     500: 0,
@@ -31,6 +33,7 @@ function PlasterWashers() {
 
   const prices = {
     'test-item': 0.00,
+    'test-dollar': 0.50,
     '10-dozen': 24.00,
     '21-dozen': 35.00,
     500: 65.00,
@@ -80,6 +83,7 @@ function PlasterWashers() {
   const buildLineItems = () => {
     const products = [
       { key: 'test-item', name: 'Test Item', price: 0 },
+      { key: 'test-dollar', name: 'Test Dollar', price: 50 },
       { key: '10-dozen', name: '10 Dozen Plaster Washers', price: 2400 },
       { key: '21-dozen', name: '21 Dozen Plaster Washers', price: 3500 },
       { key: '500', name: '500 Plaster Washers', price: 6500 },
@@ -103,13 +107,23 @@ function PlasterWashers() {
   };
 
   async function handleCheckout(lineItems) {
-    const response = await fetch('http://localhost:4242/create-checkout-session', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ lineItems }),
-    });
-    const data = await response.json();
-    window.location = data.url;
+    try {
+      const response = await fetch('https://cssapi.onrender.com/create-checkout-session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ lineItems }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      window.location = data.url;
+    } catch (error) {
+      console.error('Checkout failed:', error);
+      alert('Checkout failed. Please try again.');
+    }
   }
 
   return (
@@ -146,6 +160,23 @@ function PlasterWashers() {
                 />
               </td>
               <td>{formatCurrency(rowTotals['test-item'])}</td>
+            </tr>
+            <tr>
+              <td>Test Dollar</td>
+              <td>0</td>
+              <td>{formatCurrency(prices['test-dollar'])}</td>
+              <td>
+                <input
+                  type="number"
+                  min="0"
+                  max="10000"
+                  value={quantities['test-dollar']}
+                  onChange={(e) => handleQuantityChange('test-dollar', e.target.value)}
+                  onBlur={(e) => handleQuantityBlur('test-dollar', e.target.value)}
+                  aria-label="Quantity for Test Dollar"
+                />
+              </td>
+              <td>{formatCurrency(rowTotals['test-dollar'])}</td>
             </tr>
             <tr>
               <td>10 Dozen Plaster Washers</td>
