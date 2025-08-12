@@ -19,7 +19,13 @@ app.use(cors({
 }));
 app.use(express.json());
 
+// Test route to verify server is working
+app.get('/', (req, res) => {
+  res.json({ message: 'CSS API Server is running!' });
+});
+
 app.post('/create-checkout-session', async (req, res) => {
+  console.log('Received checkout request:', req.body);
   const { lineItems } = req.body;
   try {
     const session = await stripe.checkout.sessions.create({
