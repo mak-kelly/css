@@ -12,10 +12,11 @@ const stripe = Stripe(STRIPE_SECRET_KEY); // TODO: Replace with your Stripe secr
 app.use(cors({
   origin: [
     'http://localhost:5173', // Local development
-    'https://css-ngst.onrender.com', // Production frontend
+    'https://css-nsgt.onrender.com', // Production frontend (corrected URL)
   ],
-  methods: ['GET', 'POST'],
+  methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type'],
+  credentials: false,
 }));
 app.use(express.json());
 
@@ -32,8 +33,8 @@ app.post('/create-checkout-session', async (req, res) => {
       payment_method_types: ['card'],
       line_items: lineItems,
       mode: 'payment',
-      success_url: 'https://css-ngst.onrender.com/success',
-      cancel_url: 'https://css-ngst.onrender.com/cancel',
+      success_url: 'https://css-nsgt.onrender.com/success',
+      cancel_url: 'https://css-nsgt.onrender.com/cancel',
     });
     res.json({ url: session.url });
   } catch (e) {
