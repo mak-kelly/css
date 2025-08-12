@@ -107,20 +107,30 @@ function PlasterWashers() {
   };
 
   async function handleCheckout(lineItems) {
-    const response = await fetch('http://localhost:4242/create-checkout-session', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ lineItems }),
-    });
-    const data = await response.json();
-    window.location = data.url;
+    try {
+      const response = await fetch('https://cssapi.onrender.com/create-checkout-session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ lineItems }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      window.location = data.url;
+    } catch (error) {
+      console.error('Checkout failed:', error);
+      alert('Checkout failed. Please try again.');
+    }
   }
 
   return (
     <>
-      <Nav />
       <div id="plaster-washer-checkout-header">
-        <h1>Plaster Washers</h1>
+        <Nav />
+        <h1>Plaster Washer Checkout</h1>
       </div>
       <div id="washer-table">
         <table>
@@ -271,7 +281,13 @@ function PlasterWashers() {
               <td>{formatCurrency(rowTotals['10000'])}</td>
             </tr>
             <tr>
-              <td>90 Piece Plaster Washer Repair Kit</td>
+              <td>
+                90 Piece Plaster Washer Repair Kit
+                <br />
+                <small className="product-description">
+                  Plaster washers, rust proof coated screws and a screw driving bit.
+                </small>
+              </td>
               <td>90</td>
               <td>{formatCurrency(prices['90-piece-kit'])}</td>
               <td>
@@ -288,7 +304,13 @@ function PlasterWashers() {
               <td>{formatCurrency(rowTotals['90-piece-kit'])}</td>
             </tr>
             <tr>
-              <td>175 Piece Plaster Washer Repair Kit</td>
+              <td>
+                175 Piece Plaster Washer Repair Kit
+                <br />
+                <small className="product-description">
+                  Plaster washers, rust proof coated screws and a screw driving bit.
+                </small>
+              </td>
               <td>175</td>
               <td>{formatCurrency(prices['175-piece-kit'])}</td>
               <td>
@@ -305,7 +327,13 @@ function PlasterWashers() {
               <td>{formatCurrency(rowTotals['175-piece-kit'])}</td>
             </tr>
             <tr>
-              <td>250 Piece Plaster Washer Repair Kit</td>
+              <td>
+                250 Piece Plaster Washer Repair Kit
+                <br />
+                <small className="product-description">
+                  Plaster washers, rust proof coated screws and a screw driving bit.
+                </small>
+              </td>
               <td>250</td>
               <td>{formatCurrency(prices['250-piece-kit'])}</td>
               <td>

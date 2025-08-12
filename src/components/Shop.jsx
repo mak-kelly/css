@@ -22,6 +22,8 @@ function Shop() {
                 Or just call us at 617-367-9046 and we&apos;ll order it for you,  with no shipping or freight fees!
               </p>
               <br />
+              <p>Be aware! The inventory listed on Ace Hardware is ONE DAY BEHIND. Come in and see us to see what we have in stock!</p>
+              <br />
               <div id="shop-online-button-container">
                 <a
                   href="https://www.acehardware.com/?utm_source=google&utm_medium=cpc&gclsrc=aw.ds&gad_source=1&gad_campaignid=21521805025&gbraid=0AAAAADtqLJGQa910usipopDK2HwqjA2p7&gclid=Cj0KCQ

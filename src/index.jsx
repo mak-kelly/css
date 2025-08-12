@@ -12,10 +12,13 @@ import PlasterWashers from './components/PlasterWashers';
 import About from './components/About';
 import PlasterWasherCheckout from './components/PlasterWasherCheckout';
 import Shop from './components/Shop';
+import ScrollToTop from './components/ScrollToTop';
+import CheckoutSuccess from './components/CheckoutSuccess';
 
 function App(props) {
   return (
     <BrowserRouter>
+      <ScrollToTop />  {/* Always listens for route changes */}
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -25,6 +28,7 @@ function App(props) {
           <Route path="/plaster-washer-checkout" element={<PlasterWasherCheckout />} />
           <Route path="/cancel" element={<Navigate to="/plaster-washer-checkout" />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/success" element={<CheckoutSuccess />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </div>

@@ -29,7 +29,7 @@ h2 {
   color:rgb(16, 37, 60)
 }
 
-nav {
+#nav-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,8 +50,47 @@ a:link {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  color: #fff;
+  color: #fff !important;
   text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+#nav-link-home {
+  background-image: url('/logo-short.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 100%;
+
+}
+
+#nav-link-plaster-washers:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+#nav-link-services:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+#nav-link-shop:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+#nav-link-about:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+#nav-link-phone-number:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.nav-link:visited, .nav-link:link {
+  color: #fff !important;
 }
 
 .nav-link:hover {
@@ -77,11 +116,9 @@ a:link {
   justify-content: space-between;
   width: 80%;
   background-color: rgb(16, 37, 60);
+  max-width: 1500px;
+  margin: 0 auto;
 
-}
-
-#nav-links:hover {
-  background-color: rgb(13, 30, 49);
 }
 
 ul {
@@ -106,9 +143,14 @@ ul {
   background-repeat: no-repeat;
 }
 
+#come-visit-us {
+  padding-top: 20px;
+}
+
 #come-visit-us-text {
   text-align: center;
   padding: 10px;
+  padding-bottom: 20px;
 }
 
 #come-visit-us-map {
@@ -120,19 +162,24 @@ ul {
 #home-header-text {
   position: relative;
   color: white;
+  display: none;
 }
 
 #home-header-text-2 {
   color: white;
   position: relative;
+  font-size: 3rem;
+  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 #featured-brands {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 70vw;
   margin: 0 auto;
-  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   height: 20vh;
 
 }
@@ -140,6 +187,7 @@ ul {
 #featured-brands-header {
   text-align: center;
   padding: 10px;
+  padding-bottom: 15px;
 }
 
 #featured-brands-list {
@@ -574,28 +622,23 @@ ul {
   background-repeat: no-repeat;
 }
 
-#gift-cards:hover,
-#blind-cutting:hover,
-#catalog-sales:hover,
-#delivery:hover,
-#design-service:hover,
-#glass-cutting:hover,
-#in-house-handyman:hover,
-#key-cutting:hover,
-#knife-sharpening:hover,
-#lamp-repair:hover,
-#lock-servicing:hover,
-#paint-color-matching:hover,
-#referrals:hover,
-#rental:hover,
-#rug-shampoo-rental:hover,
-#screen-repair:hover,
-#se-habla-espanol:hover,
-#shade-cutting:hover,
-#shipping-service:hover,
-#window-repair:hover {
-  transform: scale(1.05) ;
-  transition: transform 0.5s ease;
+#se-habla-espanol {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/lincoln.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#footer-containter {
+  background-color: rgb(16, 37, 60);
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#footer-section a, #footer-section p, #footer-section h2 {
+  color: white;
+  text-decoration: none;
 }
 
 #footer-section {
@@ -674,11 +717,13 @@ ul {
   display: flex;
   flex-direction: column;
   padding: 10px;
+  padding-right: 20px;
 }
 
 .call-to-buy-plaster-washers {
   align-self: center;
   justify-self: center;
+  padding: 15px;
 }
 
 #plaster-washers-how-to-use {
@@ -692,10 +737,11 @@ ul {
 
 #plaster-washers-use-text {
   padding: 10px;
+  padding-left: 20px;
 }
 
 #buy-plaster-washers-button {
-  background-color: rgb(16, 37, 60);
+  background-color: rgb(231, 49, 55);
   border: none;
   width: fit-content;
   height: fit-content;
@@ -705,6 +751,7 @@ ul {
   font-weight: 400;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
+  padding: 10px;
 }
 
 #buy-plaster-washers-button:hover {
@@ -719,18 +766,148 @@ ul {
 }
 
 #plaster-washer-checkout-header {
-  display: flex;
-  justify-content: center;
+  background-image: url('/plaster-washer-checkout.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+#plaster-washer-checkout-header h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0;
 }
 
 #washer-table {
-  display: flex;
-  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+#washer-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  table-layout: fixed;
+}
+
+#washer-table th:nth-child(1),
+#washer-table td:nth-child(1) {
+  width: 40%;
+}
+
+#washer-table th:nth-child(2),
+#washer-table td:nth-child(2) {
+  width: 15%;
+}
+
+#washer-table th:nth-child(3),
+#washer-table td:nth-child(3) {
+  width: 15%;
+}
+
+#washer-table th:nth-child(4),
+#washer-table td:nth-child(4) {
+  width: 15%;
+}
+
+#washer-table th:nth-child(5),
+#washer-table td:nth-child(5) {
+  width: 15%;
+}
+
+#washer-table th {
+  background-color: rgb(16, 37, 60);
+  color: white;
+  padding: 15px 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#washer-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e9ecef;
+  vertical-align: middle;
+}
+
+#washer-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+#washer-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+#washer-table input[type="number"] {
+  width: 80px;
+  padding: 8px 10px;
+  border: 2px solid #dee2e6;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+#washer-table input[type="number"]:focus {
+  outline: none;
+  border-color: rgb(16, 37, 60);
+  box-shadow: 0 0 0 3px rgba(16, 37, 60, 0.1);
+}
+
+#washer-table .product-description {
+  color: #666;
+  font-style: italic;
+  font-size: 0.75rem;
+  margin-top: 4px;
+}
+
+#subtotal-row {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  border-top: 2px solid rgb(16, 37, 60);
+}
+
+#subtotal-row td {
+  padding: 15px 12px;
+  font-size: 1.1rem;
 }
 
 #checkout-button {
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  margin: 30px 0;
+}
+
+#checkout-button button {
+  background-color: #635bff;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  min-width: 200px;
+}
+
+#checkout-button button:hover {
+  background-color: #5a52e6;
+}
+
+#checkout-button button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
 }
 
 #delivery-details {
@@ -794,6 +971,10 @@ ul {
   padding: 10px;
 }
 
+#hours-header {
+  padding-bottom: 10px;
+}
+
 #hours-text {
   display: flex;
   flex-direction: column;
@@ -801,7 +982,7 @@ ul {
 }
 
 #about-header-text {
-  color:rgb(16, 37, 60);
+  color: white;
 
 }
 
@@ -845,6 +1026,12 @@ ul {
   width: fill;
 }
 
+#shop-in-store-map {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
 #shop-in-store-text {
   padding-bottom: 15px;
 }
@@ -881,3 +1068,28 @@ ul {
   cursor: pointer;
 }
 
+#checkout-success-header {
+  background-image: url('/plaster-washer-checkout.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+#checkout-success-header-text {
+  color: white;
+}
+
+#checkout-success-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  margin: 0 auto;
+  max-width: 1300px;
+  padding: 15px;
+  height: 20vh;
+}

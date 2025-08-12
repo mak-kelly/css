@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router';
 import Nav from './Nav';
 import Footer from './Footer';
 
@@ -10,7 +11,8 @@ function Home() {
         <div className="header-text-container">
           <h1 className="header-text" id="home-header-text">Charles Street Supply</h1>
           <br />
-          <h2 id="home-header-text-2">Boston&apos;s Oldest Hardware Store</h2>
+          <h1 id="home-header-text-2">Boston&apos;s Oldest &amp; Most</h1>
+          <h1 id="home-header-text-2">Trusted Hardware Store</h1>
         </div>
       </section>
       <section id="featured-brands">
@@ -31,8 +33,8 @@ function Home() {
             <p>With the few simple tools, repair plaster with Charles Street Supply’s exclusive plaster washers.</p>
             <br />
             <div id="homepage-plaster-washers-text-buttons">
-              <a id="homepage-plaster-washers-text-buttons-learn-more" href="/plaster-washers">Learn More</a>
-              <a id="homepage-plaster-washers-text-buttons-buy-now" href="/plaster-washer-checkout">Buy Now</a>
+              <NavLink id="homepage-plaster-washers-text-buttons-learn-more" to="/plaster-washers">Learn More</NavLink>
+              <NavLink id="homepage-plaster-washers-text-buttons-buy-now" to="/plaster-washer-checkout">Buy Now</NavLink>
             </div>
           </div>
           <div id="homepage-plaster-washers-image">
@@ -40,7 +42,6 @@ function Home() {
           </div>
         </section>
       </div>
-
       <section id="come-visit-us">
         <div id="come-visit-us-text">
           <h2>Family owned and operated since 1948.</h2>
