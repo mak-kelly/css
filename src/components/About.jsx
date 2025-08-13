@@ -12,7 +12,7 @@ function About() {
         </div>
       </section>
       <section id="our-story-section">
-        <div id="our-story-containter-1">
+        <div id="our-story-container-1">
           <div className="our-story-text-container">
             <p>My dad, Dick Gurnon was a salesman and he called on a man who had just opened a tiny hardware store in a basement on Charles street. The year was 1948.
               After awhile Dick started to work part time and on weekends in the store and soon became partners in 1952.
@@ -32,7 +32,7 @@ function About() {
             <img src="/our-story-image-1.png" alt="Original Charles Street Hardware Store" />
           </div>
         </div>
-        <div id="our-story-containter-2">
+        <div id="our-story-container-2">
           <div className="our-story-text-container-2">
             <p>
               On Labor Day 1963 we opened a new store at our present location at 54 Charles Street, with very limited inventory.
