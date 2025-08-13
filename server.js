@@ -33,6 +33,15 @@ app.post('/create-checkout-session', async (req, res) => {
       payment_method_types: ['card'],
       line_items: lineItems,
       mode: 'payment',
+      billing_address_collection: 'required',
+      shipping_address_collection: {
+        allowed_countries: ['US', 'CA'],
+      },
+      shipping_options: [
+        {
+          shipping_rate: 'shr_1QZ002FZ0000000000000000',
+        },
+      ],
       success_url: 'https://css-nsgt.onrender.com/success',
       cancel_url: 'https://css-nsgt.onrender.com/cancel',
     });
