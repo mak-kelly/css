@@ -37,11 +37,6 @@ app.post('/create-checkout-session', async (req, res) => {
       shipping_address_collection: {
         allowed_countries: ['US', 'CA'],
       },
-      shipping_options: [
-        {
-          shipping_rate: 'shr_1QZ002FZ0000000000000000',
-        },
-      ],
       success_url: 'https://css-nsgt.onrender.com/success',
       cancel_url: 'https://css-nsgt.onrender.com/cancel',
     });
