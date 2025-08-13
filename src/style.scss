@@ -373,7 +373,7 @@ ul {
 
 }
 
-#our-story-containter-1 {
+#our-story-container-1 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -383,7 +383,7 @@ ul {
   max-width: 1300px;
 }
 
-#our-story-containter-2 {
+#our-story-container-2 {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -1092,4 +1092,352 @@ ul {
   max-width: 1300px;
   padding: 15px;
   height: 20vh;
+}
+
+@media (max-width: 1200px) {
+  #featured-brands-list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #featured-brands {
+    height: 40vh;
+  }
+
+  #homepage-plaster-washers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #homepage-plaster-washers-text {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #homepage-plaster-washers-text-buttons {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #homepage-plaster-washers-image-img {
+    display: none;
+  }
+
+  #footer-section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+
+  #plaster-washers-overview {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #plaster-washers-overview-text {
+    padding-bottom: 20px;
+  }
+
+  #plaster-washers-how-to-use {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+ #plaster-washers-use-text {
+  padding-bottom: 20px;
+ }
+}
+
+ @media (max-width: 414px) {
+   #home-header-text-2 {
+     font-size: 2rem;
+   }  
+
+   #plaster-washers-use-video iframe{
+    width: 350px;
+    height: 200px;
+   }
+
+   #services-overview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: auto;
+    padding: 20px 10px;
+    gap: 20px;
+   }
+
+   #more-services-section {
+    margin-top: 40px;
+    padding-top: 20px;
+   }
+
+   #more-services-tabs {
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    height: auto;
+   }
+
+   .service-tab {
+    width: 80%;
+    height: 60px;
+    margin: 5px 0;
+    font-size: 0.9rem;
+   }
+
+   /* Ensure proper spacing between sections */
+   #delivery-details,
+   #services-details {
+    width: 100%;
+    padding: 15px;
+   }
+
+   #delivery-details h2,
+   #services-details h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+   }
+
+   #delivery-details p,
+   #services-details p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+   }
+
+   /* Force clear separation between sections */
+   #services-overview {
+    margin-bottom: 10px !important;
+    position: relative !important;
+    z-index: 1;
+   }
+
+   #more-services-section {
+    clear: both !important;
+    position: relative !important;
+    z-index: 2;
+    margin-top: 15px !important;
+    padding-top: 10px !important;
+   }
+
+   /* Ensure header sections don't interfere */
+   .header-section {
+    height: 50vh !important;
+    margin-bottom: 20px !important;
+   }
+
+   /* Force proper flow for all sections */
+   #services-section-header + #services-overview,
+   #services-overview + #more-services-section {
+    display: block !important;
+    width: 100% !important;
+   }
+
+   /* Emergency overlap fix - add visible separation */
+   #services-overview::after {
+    content: "";
+    display: block;
+    height: 50px;
+    width: 100%;
+    background: transparent;
+   }
+
+   #more-services-section::before {
+    content: "";
+    display: block;
+    height: 50px;
+    width: 100%;
+    background: transparent;
+   }
+
+   /* Override any conflicting flexbox or grid */
+   body {
+    overflow-x: hidden !important;
+   }
+
+   #services-overview,
+   #more-services-section {
+    flex-shrink: 0 !important;
+    min-height: auto !important;
+    max-height: none !important;
+   }
+
+   #shop-online-body {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+   }
+
+   #ace-logo {
+    display: none;
+   }
+
+ }
+
+/* ===== HAMBURGER MENU STYLES ===== */
+
+/* Hide mobile nav by default */
+.mobile-nav {
+  display: none;
+}
+
+/* Show desktop nav by default */
+.desktop-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Mobile styles */
+@media (max-width: 880px) {
+  /* Hide desktop nav on mobile */
+  .desktop-nav {
+    display: none;
+  }
+
+  .header-text {
+    font-size: 3rem;
+  }
+
+  #our-story-container-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+   }
+
+   #our-story-container-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+   }
+
+   #jack-signature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+   }
+
+  /* Also hide the desktop logo */
+  #nav-container > #logo-link {
+    display: none;
+  }
+
+  /* Show mobile nav on mobile */
+  .mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgb(16, 37, 60);
+    position: relative;
+    width: 100%;
+  }
+
+  /* Mobile logo */
+  #mobile-logo {
+    height: 50px;
+    width: auto;
+  }
+
+  /* Hamburger button */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+  }
+
+  .hamburger-line {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+
+  /* Hamburger animation when open */
+  .hamburger.open .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+
+  .hamburger.open .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+  /* Mobile nav links */
+  .mobile-nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(16, 37, 60);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+
+  .mobile-nav-links.open {
+    transform: translateX(0);
+  }
+
+  .mobile-nav-links li {
+    margin: 20px 0;
+  }
+
+  .mobile-nav-link {
+    color: white !important;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: color 0.3s ease;
+  }
+
+  .mobile-nav-link:hover,
+  .mobile-nav-link:focus {
+    color: #ccc !important;
+    text-decoration: underline;
+  }
+
+  /* Hide desktop logo on mobile */
+  #logo-link {
+    display: none;
+  }
+
 }
