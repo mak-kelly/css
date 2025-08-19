@@ -17,6 +17,9 @@ function PlasterWashers() {
     '250-piece-kit': '0',
   });
 
+  const [shippingCountry, setShippingCountry] = useState('US');
+  const [expressShipping, setExpressShipping] = useState(false);
+
   const [rowTotals, setRowTotals] = useState({
     'test-item': 0,
     'test-dollar': 0,
@@ -77,7 +80,30 @@ function PlasterWashers() {
   };
 
   const calculateSubtotal = () => {
-    return Object.values(rowTotals).reduce((sum, total) => sum + total, 0);
+    let subtotal = Object.values(rowTotals).reduce((sum, total) => sum + total, 0);
+
+    // Add express shipping to subtotal if selected
+    if (expressShipping && shippingCountry === 'US') {
+      subtotal += 35.00;
+    }
+
+    return subtotal;
+  };
+
+  // Calculate total washer quantity to determine if express shipping is available
+  const getTotalWasherQuantity = () => {
+    const washerKeys = ['10-dozen', '21-dozen', '500', '1000', '5000', '10000', '90-piece-kit', '175-piece-kit', '250-piece-kit'];
+    return washerKeys.reduce((total, key) => {
+      const qty = Number(quantities[key]) || 0;
+      // Convert dozens to pieces for 10-dozen and 21-dozen
+      if (key === '10-dozen') return total + (qty * 120); // 10 dozen = 120 pieces
+      if (key === '21-dozen') return total + (qty * 252); // 21 dozen = 252 pieces
+      if (key === '90-piece-kit') return total + (qty * 90);
+      if (key === '175-piece-kit') return total + (qty * 175);
+      if (key === '250-piece-kit') return total + (qty * 250);
+      // For other keys, the number is already the piece count
+      return total + (qty * Number(key));
+    }, 0);
   };
 
   const buildLineItems = () => {
@@ -94,7 +120,8 @@ function PlasterWashers() {
       { key: '175-piece-kit', name: '175 Piece Plaster Washer Repair Kit', price: 4600 },
       { key: '250-piece-kit', name: '250 Piece Plaster Washer Repair Kit', price: 6500 },
     ];
-    return products
+
+    const lineItems = products
       .filter((p) => Number(quantities[p.key]) > 0)
       .map((p) => ({
         price_data: {
@@ -104,6 +131,23 @@ function PlasterWashers() {
         },
         quantity: Number(quantities[p.key]),
       }));
+
+    // Add express shipping if selected (US orders with ≤500 washers only)
+    if (expressShipping && shippingCountry === 'US') {
+      lineItems.push({
+        price_data: {
+          currency: 'usd',
+          product_data: {
+            name: 'Express Shipping',
+            description: 'Fast 1-2 day delivery for US orders',
+          },
+          unit_amount: 3500, // $35 in cents
+        },
+        quantity: 1,
+      });
+    }
+
+    return lineItems;
   };
 
   async function handleCheckout(lineItems) {
@@ -111,7 +155,7 @@ function PlasterWashers() {
       const response = await fetch('https://cssapi.onrender.com/create-checkout-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ lineItems }),
+        body: JSON.stringify({ lineItems, shippingCountry }),
       });
 
       if (!response.ok) {
@@ -355,6 +399,52 @@ function PlasterWashers() {
             </tr>
           </tbody>
         </table>
+      </div>
+      <div id="shipping-options">
+        <div id="shipping-country-selector">
+          <label htmlFor="country-select">
+            Shipping to:
+            <select
+              id="country-select"
+              name="country-select"
+              value={shippingCountry}
+              onChange={(e) => {
+                setShippingCountry(e.target.value);
+                // Reset express shipping when changing countries
+                if (e.target.value === 'CA') {
+                  setExpressShipping(false);
+                }
+              }}
+            >
+              <option value="US">United States</option>
+              <option value="CA">Canada</option>
+            </select>
+          </label>
+        </div>
+
+        {/* Express Shipping Option for US orders ≤ 500 washers */}
+        {shippingCountry === 'US' && getTotalWasherQuantity() > 0 && getTotalWasherQuantity() <= 500 && (
+          <div id="express-shipping-option">
+            <label htmlFor="express-shipping-checkbox">
+              <input
+                id="express-shipping-checkbox"
+                type="checkbox"
+                checked={expressShipping}
+                onChange={(e) => setExpressShipping(e.target.checked)}
+              />
+              <span>
+                Add Express Shipping (+$35) - 1-2 business days
+              </span>
+            </label>
+          </div>
+        )}
+
+        {/* Canada Shipping Notice */}
+        {shippingCountry === 'CA' && (
+          <div id="canada-shipping-notice">
+            <strong>📦 Canada Shipping:</strong> A $30 shipping fee will be automatically added to Canadian orders.
+          </div>
+        )}
       </div>
       <div id="checkout-button">
         <button
