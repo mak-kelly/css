@@ -7,7 +7,7 @@ const cors = require('cors');
 
 const app = express();
 const { STRIPE_SECRET_KEY } = process.env;
-const stripe = Stripe(STRIPE_SECRET_KEY); // TODO: Replace with your Stripe secret key
+const stripe = Stripe(STRIPE_SECRET_KEY);
 
 app.use(cors({
   origin: [
@@ -26,12 +26,10 @@ app.get('/', (req, res) => {
 });
 
 app.post('/create-checkout-session', async (req, res) => {
-  console.log('Received checkout request:', req.body);
   const { lineItems, shippingCountry } = req.body;
   try {
     // Calculate total quantity of washers
     const washerQuantity = lineItems.reduce((total, item) => {
-      // Check if the item is a washer (you may need to adjust this logic based on your product identification)
       if (item.price_data?.product_data?.name?.toLowerCase().includes('washer')
           || item.price_data?.product_data?.metadata?.type === 'washer') {
         return total + item.quantity;
@@ -39,11 +37,7 @@ app.post('/create-checkout-session', async (req, res) => {
       return total;
     }, 0);
 
-    console.log('Shipping Country:', shippingCountry);
-    console.log('Washer Quantity:', washerQuantity);
-    console.log('Line Items:', JSON.stringify(lineItems, null, 2));
-
-    // Base session configuration with shipping options for both countries
+    // Base session configuration
     const sessionConfig = {
       payment_method_types: ['card'],
       line_items: lineItems,
@@ -78,8 +72,6 @@ app.post('/create-checkout-session', async (req, res) => {
       // Update the session with modified line items
       sessionConfig.line_items = lineItems;
     }
-
-    console.log('Final sessionConfig shipping_options:', JSON.stringify(sessionConfig.shipping_options, null, 2));
 
     const session = await stripe.checkout.sessions.create(sessionConfig);
 
