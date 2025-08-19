@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
 
 app.post('/create-checkout-session', async (req, res) => {
   console.log('Received checkout request:', req.body);
-  const { lineItems } = req.body;
+  const { lineItems, shippingCountry } = req.body;
   try {
     // Calculate total quantity of washers
     const washerQuantity = lineItems.reduce((total, item) => {
@@ -39,6 +39,7 @@ app.post('/create-checkout-session', async (req, res) => {
       return total;
     }, 0);
 
+    console.log('Shipping Country:', shippingCountry);
     console.log('Washer Quantity:', washerQuantity);
     console.log('Line Items:', JSON.stringify(lineItems, null, 2));
 
@@ -54,99 +55,28 @@ app.post('/create-checkout-session', async (req, res) => {
       },
       success_url: 'https://css-nsgt.onrender.com/success',
       cancel_url: 'https://css-nsgt.onrender.com/cancel',
+      metadata: {
+        washer_quantity: washerQuantity.toString(),
+      },
     };
 
-    // Add shipping options based on washer quantity
-    if (washerQuantity > 0 && washerQuantity <= 500) {
-      // For orders with 1-500 washers, provide different options for US and Canada
-      sessionConfig.shipping_options = [
-        // US Options
-        {
-          shipping_rate_data: {
-            type: 'fixed_amount',
-            fixed_amount: {
-              amount: 0,
-              currency: 'usd',
-            },
-            display_name: 'Standard Shipping (Free)',
-            delivery_estimate: {
-              minimum: {
-                unit: 'business_day',
-                value: 3,
-              },
-              maximum: {
-                unit: 'business_day',
-                value: 7,
-              },
-            },
+    // Apply Canada shipping fee automatically for Canadian orders with washers
+    if (shippingCountry === 'CA' && washerQuantity > 0) {
+      // Add $30 shipping fee as a line item for Canadian orders
+      lineItems.push({
+        price_data: {
+          currency: 'usd',
+          product_data: {
+            name: 'Shipping to Canada',
+            description: 'Standard shipping fee for Canadian orders',
           },
+          unit_amount: 3000, // $30 in cents
         },
-        {
-          shipping_rate_data: {
-            type: 'fixed_amount',
-            fixed_amount: {
-              amount: 3500, // $35 in cents
-              currency: 'usd',
-            },
-            display_name: 'Express Shipping',
-            delivery_estimate: {
-              minimum: {
-                unit: 'business_day',
-                value: 1,
-              },
-              maximum: {
-                unit: 'business_day',
-                value: 2,
-              },
-            },
-          },
-        },
-        // Canada Option
-        {
-          shipping_rate_data: {
-            type: 'fixed_amount',
-            fixed_amount: {
-              amount: 3500, // $35 in cents
-              currency: 'usd',
-            },
-            display_name: 'Standard Shipping to Canada',
-            delivery_estimate: {
-              minimum: {
-                unit: 'business_day',
-                value: 5,
-              },
-              maximum: {
-                unit: 'business_day',
-                value: 10,
-              },
-            },
-          },
-        },
-      ];
-    } else if (washerQuantity > 500) {
-      // For orders with 500+ washers, provide free shipping options
-      sessionConfig.shipping_options = [
-        {
-          shipping_rate_data: {
-            type: 'fixed_amount',
-            fixed_amount: {
-              amount: 0,
-              currency: 'usd',
-            },
-            display_name: 'Free Shipping (US & Canada)',
-            delivery_estimate: {
-              minimum: {
-                unit: 'business_day',
-                value: 3,
-              },
-              maximum: {
-                unit: 'business_day',
-                value: 10,
-              },
-            },
-          },
-        },
-      ];
+        quantity: 1,
+      });
+
+      // Update the session with modified line items
+      sessionConfig.line_items = lineItems;
     }
 
     console.log('Final sessionConfig shipping_options:', JSON.stringify(sessionConfig.shipping_options, null, 2));

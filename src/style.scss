@@ -910,6 +910,56 @@ ul {
   cursor: not-allowed;
 }
 
+/* Shipping Options Styles */
+#shipping-options {
+  margin: 20px 0;
+  text-align: center;
+}
+
+#shipping-country-selector {
+  margin-bottom: 15px;
+}
+
+#shipping-country-selector label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+#country-select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#express-shipping-option {
+  margin-bottom: 15px;
+}
+
+#express-shipping-option label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+#express-shipping-checkbox {
+  transform: scale(1.2);
+}
+
+#express-shipping-option span {
+  font-weight: bold;
+}
+
+#canada-shipping-notice {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #f0f8ff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
 #delivery-details {
   display: flex;
   flex-direction: column;
