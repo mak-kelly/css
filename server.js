@@ -12,7 +12,7 @@ const stripe = Stripe(STRIPE_SECRET_KEY);
 app.use(cors({
   origin: [
     'http://localhost:5173', // Local development
-    'https://css-nsgt.onrender.com', // Production frontend (corrected URL)
+    'https://charlesstsupply.com', // Production frontend
   ],
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type'],
@@ -47,8 +47,8 @@ app.post('/create-checkout-session', async (req, res) => {
       shipping_address_collection: {
         allowed_countries: ['US', 'CA'],
       },
-      success_url: 'https://css-nsgt.onrender.com/success',
-      cancel_url: 'https://css-nsgt.onrender.com/cancel',
+      success_url: 'https://charlesstsupply.com/success',
+      cancel_url: 'https://charlesstsupply.com/cancel',
       metadata: {
         washer_quantity: washerQuantity.toString(),
       },
