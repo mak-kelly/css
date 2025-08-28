@@ -12,11 +12,15 @@
 -design plaster washer table
 -when you navigate between pages, move to the top of the page
 -success page for stripe. maybe rerout to plaster washer page or show a reciept
-
-
------------------------------------------------------------------------------------------------------------------
 -add tax and shipping for stripe
 -mobile view:
     -featured brands
     -hamburger menu
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------
+-mobile view:
     -our services spacing
+-mobile view plaster washer table (make a min width)
