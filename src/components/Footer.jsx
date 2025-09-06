@@ -18,7 +18,7 @@ function Footer() {
             <div id="contact-us-text">
               <a href="tel:1-800-382-4360">TOLL-FREE: 1-800-382-4360</a>
               <a href="tel:617-367-9046">Local: 617-367-9046</a>
-              <p>Email: <a href="mailto:info@cssc.com">info@cssc.com</a></p>
+              <p>Email: <a href="mailto:info@charlesstsupply.com ">info@charlesstsupply.com</a></p>
               <p>Address:&nbsp;
                 <a href="https://maps.app.goo.gl/Mad6wuUkUzwd5c2U7">
                   54 Charles St, Boston, MA 02114
