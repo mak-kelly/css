@@ -1,12 +1,106 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Charles Street Supply & Hardware</title>
-    <link rel="icon" href="/logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    <div id="main">Loading</div>
-	<script type="module" src="src/index.jsx"></script>
-  </body>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Charles Street Supply | Boston, MA Hardware Store</title>
+  <meta name="description"
+    content="Shop zinc-plated steel plaster repair washers at Charles Street Supply in Boston's historic Beacon Hill. Secure sagging plaster to wood lath easily.">
+  <link rel="icon" href="/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <!-- JSON-LD Schema Markup -->
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "HardwareStore",
+            "@id": "https://www.charlesstsupply.com/#localbusiness",
+            "name": "Charles Street Supply",
+            "image": "https://www.charlesstsupply.com/logo.png",
+            "url": "https://www.charlesstsupply.com",
+            "telephone": "+1-617-367-9046",
+            "email": "info@charlesstsupply.com",
+            "priceRange": "$$",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "54 Charles St",
+              "addressLocality": "Boston",
+              "addressRegion": "MA",
+              "postalCode": "02114",
+              "addressCountry": "US"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 42.3574526,
+              "longitude": -71.0729103
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday"
+                ],
+                "opens": "08:00",
+                "closes": "18:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "09:00",
+                "closes": "17:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Sunday",
+                "opens": "11:00",
+                "closes": "16:00"
+              }
+            ]
+          },
+          {
+            "@type": "Product",
+            "@id": "https://www.charlesstsupply.com/plaster-washers/#product",
+            "name": "Zinc-Plated Steel Plaster Repair Washers",
+            "image": "https://www.charlesstsupply.com/plaster-washers.png",
+            "description": "Premium zinc-plated steel plaster repair washers designed to stabilize sagging or cracked historic plaster walls and ceilings by anchoring them to the underlying wood lath.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Charles Street Supply"
+            },
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "USD",
+              "lowPrice": 24.00,
+              "highPrice": 690.00,
+              "offerCount": 9,
+              "priceValidUntil": "2027-12-31",
+              "url": "https://www.charlesstsupply.com/plaster-washer-checkout",
+              "availability": "https://schema.org/InStock",
+              "seller": {
+                "@type": "HardwareStore",
+                "name": "Charles Street Supply"
+              }
+            }
+          }
+        ]
+      }
+    </script>
+</head>
+
+<body>
+  <div id="main">Loading</div>
+  <script type="module" src="src/index.jsx"></script>
+</body>
+
 </html>
