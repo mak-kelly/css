@@ -22,17 +22,22 @@ function PlasterWashers() {
           <h2>Why Plaster Washers?</h2>
           <br />
           <p>
-            The old houses we love and live in are almost all distinguished by the pervasive use of plasterwork. Real plaster has a look, feel,
-            acoustic properties and often rich decorative detail that just can&apos;t be copied by its modern cost cutting substitute--paper-faced, gypsum-filled wallboard, or drywall.
+            The historic homes we love and live in are defined by their beautiful plasterwork.
+            Unlike modern drywall, real plaster offers unmatched acoustic properties, character,
+            and decorative detail.
           </p>
           <br />
           <p>
-            Houses move and breathe, however, much like humans, and over time can develop cracks in the walls and ceilings.
-            In these areas, the layers of plaster are pulling away from the underlying strips of wood lath which support it.
+            However, houses shift and settle over time, which causes old plaster to pull away
+            from the underlying wood lath, leading to sagging and cracking. Charles Street Supply
+            offers high-quality, zinc-plated steel plaster repair washers designed specifically to
+            solve this problem. These durable zinc-plated steel plaster washers act as stabilizing
+            anchors, holding the plaster securely back against the lath so you can patch and restore
+            your walls and ceilings with ease.
           </p>
         </div>
         <div id="plaster-washers-overview-image">
-          <img src="/plaster-washers.jpg" alt="Plaster Washers" />
+          <img src="/plaster-washers.jpg" alt="Zinc-plated steel plaster repair washers by Charles Street Supply for historic plaster stabilization" />
         </div>
       </section>
       <section id="plaster-washers-how-to-use">
