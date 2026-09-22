@@ -765,6 +765,216 @@ ul {
   background-repeat: no-repeat;
 }
 
+.header-subtext {
+  color: #f0f0f0;
+  font-size: 1.15rem;
+  margin-top: 8px;
+  font-weight: 300;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+#plaster-washers-benefits-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  background-color: #f7f9fa;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 16px 20px;
+
+  .benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: rgb(16, 37, 60);
+
+    .benefit-icon {
+      color: #E73137;
+      flex-shrink: 0;
+    }
+  }
+}
+
+#plaster-washers-steps-section {
+  width: 70vw;
+  max-width: 1300px;
+  margin: 40px auto 30px auto;
+  padding: 15px;
+
+  .steps-header {
+    text-align: center;
+    margin-bottom: 30px;
+
+    h2 {
+      font-size: 2rem;
+      color: rgb(16, 37, 60);
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: #64748b;
+      font-size: 1.05rem;
+    }
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    .step-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 24px 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+      }
+
+      .step-number {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: #E73137;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+      }
+
+      h3 {
+        font-size: 1.15rem;
+        color: rgb(16, 37, 60);
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: #475569;
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+#plaster-washers-faq-section {
+  width: 70vw;
+  max-width: 1000px;
+  margin: 45px auto 30px auto;
+  padding: 15px;
+
+  .faq-header {
+    text-align: center;
+    margin-bottom: 25px;
+
+    h2 {
+      font-size: 2rem;
+      color: rgb(16, 37, 60);
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: #64748b;
+      font-size: 1.05rem;
+    }
+  }
+
+  .faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .faq-item {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+      &.open {
+        border-color: #cbd5e1;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      }
+
+      .faq-question-btn {
+        width: 100%;
+        padding: 18px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        text-align: left;
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: rgb(16, 37, 60);
+        font-family: inherit;
+
+        &:hover {
+          background-color: #f8fafc;
+        }
+
+        .faq-chevron {
+          color: #64748b;
+          transition: transform 0.25s ease;
+          flex-shrink: 0;
+          margin-left: 15px;
+
+          &.rotated {
+            transform: rotate(180deg);
+            color: #E73137;
+          }
+        }
+      }
+
+      .faq-answer {
+        padding: 0 20px 18px 20px;
+        color: #475569;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        border-top: 1px solid #f1f5f9;
+        padding-top: 14px;
+      }
+    }
+  }
+}
+
+#plaster-washers-cta-banner {
+  background: linear-gradient(135deg, rgb(16, 37, 60) 0%, rgb(25, 55, 90) 100%);
+  color: #ffffff;
+  text-align: center;
+  padding: 45px 20px;
+  margin-top: 40px;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+
+  p {
+    font-size: 1.05rem;
+    color: #e2e8f0;
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+  }
+}
+
+
 #plaster-washer-checkout-header {
   background-image: url('/plaster-washer-checkout.jpg');
   background-size: cover;
@@ -1059,10 +1269,122 @@ ul {
 
 }
 
+#shop-plaster-washers-featured {
+  width: 100%;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 35px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+  #shop-plaster-washers-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+
+    #shop-plaster-washers-image-container {
+      flex: 0 0 240px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      #shop-plaster-washers-img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 6px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    #shop-plaster-washers-text {
+      flex: 1;
+
+      .featured-badge {
+        display: inline-block;
+        background-color: #E73137;
+        color: #ffffff;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding: 4px 10px;
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        font-size: 1.7rem;
+        color: rgb(16, 37, 60);
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: #475569;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 12px;
+      }
+
+      .plaster-pricing-callout {
+        font-size: 0.95rem;
+        color: rgb(16, 37, 60);
+        margin-bottom: 18px;
+
+        strong {
+          color: #E73137;
+        }
+
+        .shipping-note {
+          color: #64748b;
+          margin-left: 6px;
+        }
+      }
+
+      #shop-plaster-washers-buttons {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+
+        #shop-plaster-buy-btn {
+          background-color: #E73137;
+          color: #ffffff;
+          padding: 10px 18px;
+          border-radius: 4px;
+          font-weight: 600;
+          text-decoration: none;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          transition: background-color 0.2s ease;
+
+          &:hover {
+            background-color: #c82329;
+          }
+        }
+
+        #shop-plaster-learn-btn {
+          background-color: transparent;
+          color: rgb(16, 37, 60);
+          border: 1px solid rgb(16, 37, 60);
+          padding: 10px 18px;
+          border-radius: 4px;
+          font-weight: 600;
+          text-decoration: none;
+          transition: all 0.2s ease;
+
+          &:hover {
+            background-color: rgb(16, 37, 60);
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}
+
 #shop-online {
   flex: 1;
-  height: fill;
-
+  height: auto;
 }
 
 #ace-logo {
@@ -1073,7 +1395,7 @@ ul {
 
 #shop-in-store {
   flex: 1;
-  width: fill;
+  width: 100%;
 }
 
 #shop-in-store-map {
@@ -1097,8 +1419,7 @@ ul {
 
 #shop-online-text {
   flex: 1;
-  height: fill;
-
+  height: auto;
 }
 
 #shop-online-button {
@@ -1203,9 +1524,45 @@ ul {
  #plaster-washers-use-text {
   padding-bottom: 20px;
  }
+
+  #plaster-washers-benefits-bar {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  #plaster-washers-steps-section {
+    width: 90vw;
+
+    .steps-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+  }
+
+  #plaster-washers-faq-section {
+    width: 90vw;
+  }
+
+  #shop-plaster-washers-featured #shop-plaster-washers-body {
+    flex-direction: column;
+    text-align: center;
+
+    #shop-plaster-washers-image-container {
+      flex: 0 0 auto;
+      max-width: 200px;
+    }
+
+    #shop-plaster-washers-buttons {
+      justify-content: center;
+    }
+  }
 }
 
  @media (max-width: 414px) {
+   #plaster-washers-steps-section .steps-grid {
+     grid-template-columns: 1fr;
+   }
+
    #home-header-text-2 {
      font-size: 2rem;
    }  

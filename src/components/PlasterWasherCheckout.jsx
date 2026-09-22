@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Nav from './Nav';
 import Footer from './Footer';
+import SEO from './SEO';
 
 function PlasterWashers() {
   const [quantities, setQuantities] = useState({
@@ -164,6 +165,12 @@ function PlasterWashers() {
 
   return (
     <>
+      <SEO
+        title="Buy Plaster Washers Online | Order Securely | Charles Street Supply"
+        description={'Order genuine zinc-plated steel plaster repair washers and complete repair kits online. '
+          + 'Fast nationwide delivery from Charles Street Supply in Boston, MA.'}
+        canonicalUrl="https://www.charlesstsupply.com/plaster-washer-checkout"
+      />
       <div id="plaster-washer-checkout-header">
         <Nav />
         <h1>Plaster Washer Checkout</h1>
